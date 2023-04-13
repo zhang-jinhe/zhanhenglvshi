@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- <link href="/Public/css/bootstrap.min.css" rel="stylesheet" tyle="text/css" /> -->
+	<title>默认队列</title>
+	<style>
+		body{background:#eee;}
+		.table{
+			width:auto;
+			height:auto;
+			margin:30px auto;
+			border:1px solid #000;
+			padding:10px;
+			background:#fff;
+		}
+		.submit{width:60px;height:24px;}
+		.tu{display:table-cell; vertical-align:middle; text-align:center; width:110px; height:110px;}
+		.tu img{max-width:100%; max-height:100%; display:block};
+	</style>
+</head>
+<body>
+	<div class="table">
+		<form action="/index.php?s=Admin/DefaultList/update" method="post" enctype="multipart/form-data">
+		<div style="text-align:center;margin-bottom:20px;color:red;">队列信息</div>
+		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="1" type="hidden">
+					名称：<input name="name[]" size="10" value="安装登记" type="text">
+					宽度是否满屏：<label>是<input name="is_width[0]" value="1" type="radio"></label>
+									<label>否<input name="is_width[0]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="index.php?s=A/M/purpose" size="30" type="text">
+										是否显示：<label>是<input name="is_show[0]" value="0" type="radio"></label>
+								<label>否<input name="is_show[0]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="1" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="2" type="hidden">
+					名称：<input name="name[]" size="10" value="真伪鉴别" type="text">
+					宽度是否满屏：<label>是<input name="is_width[1]" value="1" type="radio"></label>
+									<label>否<input name="is_width[1]" value="0" checked="checked" type="radio"></label>
+										链接：<input name="url[]" value="index.php?s=A/M/verify" size="30" type="text">					是否显示：<label>是<input name="is_show[1]" value="0" type="radio"></label>
+								<label>否<input name="is_show[1]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="2" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="3" type="hidden">
+					名称：<input name="name[]" size="10" value="使用说明" type="text">
+					宽度是否满屏：<label>是<input name="is_width[2]" value="1" type="radio"></label>
+									<label>否<input name="is_width[2]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="index.php?s=A/M/goods_explain" size="30" type="text">
+										是否显示：<label>是<input name="is_show[2]" value="0" type="radio"></label>
+								<label>否<input name="is_show[2]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="3" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="4" type="hidden">
+					名称：<input name="name[]" size="10" value="产品介绍" type="text">
+					宽度是否满屏：<label>是<input name="is_width[3]" value="1" type="radio"></label>
+									<label>否<input name="is_width[3]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="index.php?s=A/M/introduce" size="30" type="text">
+										是否显示：<label>是<input name="is_show[3]" value="0" type="radio"></label>
+								<label>否<input name="is_show[3]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="4" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="5" type="hidden">
+					名称：<input name="name[]" size="10" value="企业官网" type="text">
+					宽度是否满屏：<label>是<input name="is_width[4]" value="1" type="radio"></label>
+									<label>否<input name="is_width[4]" value="0" checked="checked" type="radio"></label>
+										链接：<input name="url[]" size="30" type="text">					是否显示：<label>是<input name="is_show[4]" value="0" type="radio"></label>
+								<label>否<input name="is_show[4]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="5" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="6" type="hidden">
+					名称：<input name="name[]" size="10" value="企业微信" type="text">
+					宽度是否满屏：<label>是<input name="is_width[5]" value="1" type="radio"></label>
+									<label>否<input name="is_width[5]" value="0" checked="checked" type="radio"></label>
+										链接：<input name="url[]" size="30" type="text">					是否显示：<label>是<input name="is_show[5]" value="0" type="radio"></label>
+								<label>否<input name="is_show[5]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="6" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="7" type="hidden">
+					名称：<input name="name[]" size="10" value="在线客服" type="text">
+					宽度是否满屏：<label>是<input name="is_width[6]" value="1" type="radio"></label>
+									<label>否<input name="is_width[6]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="http://wpa.qq.com/msgrd?v=3&amp;uin=%s&amp;site=qq&amp;menu=yes" size="30" type="text">
+										是否显示：<label>是<input name="is_show[6]" value="0" type="radio"></label>
+								<label>否<input name="is_show[6]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="7" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="8" type="hidden">
+					名称：<input name="name[]" size="10" value="售服登记" type="text">
+					宽度是否满屏：<label>是<input name="is_width[7]" value="1" type="radio"></label>
+									<label>否<input name="is_width[7]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="index.php?s=A/M/register" size="30" type="text">
+										是否显示：<label>是<input name="is_show[7]" value="0" type="radio"></label>
+								<label>否<input name="is_show[7]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="8" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="9" type="hidden">
+					名称：<input name="name[]" size="10" value="企业介绍" type="text">
+					宽度是否满屏：<label>是<input name="is_width[8]" value="1" type="radio"></label>
+									<label>否<input name="is_width[8]" value="0" checked="checked" type="radio"></label>
+										链接：<input name="url[]" value="index.php?s=A/M/company_intr" size="30" type="text">					是否显示：<label>是<input name="is_show[8]" value="0" type="radio"></label>
+								<label>否<input name="is_show[8]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="9" type="text">
+				</td>
+			</tr><tr height="30">
+				<td width="20%"></td>
+				<td style="font-size:12px;">
+					<input name="id[]" value="10" type="hidden">
+					名称：<input name="name[]" size="10" value="维修申请" type="text">
+					宽度是否满屏：<label>是<input name="is_width[9]" value="1" type="radio"></label>
+									<label>否<input name="is_width[9]" value="0" checked="checked" type="radio"></label>
+					链接：<input name="url[]" readonly="readonly" value="index.php?s=A/M/after_sale" size="30" type="text">
+										是否显示：<label>是<input name="is_show[9]" value="0" type="radio"></label>
+								<label>否<input name="is_show[9]" value="1" checked="checked" type="radio"></label>
+					排序：<input name="sort[]" size="2" value="10" type="text">
+				</td>
+			</tr>		</tbody></table>
+		<div style="text-align:center;"><button type="submit">保存</button></div>
+		</form>
+	</div>
+<script type="text/javascript" src="default_list_files/jquery-1.js"></script>
+<script>
+</script>
+
+</body></html>

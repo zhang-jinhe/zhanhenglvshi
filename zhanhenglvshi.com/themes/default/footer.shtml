@@ -1,0 +1,882 @@
+<div id="footercontainer" layout_type="zone" class="footercontainer lyrow">
+<div id="footerzonecontainer" layout_type="zonecontainer" class="footerzonecontainer">
+<div  layout_type="container" id="container_201912061105498121">
+<style id="style_container_201912061105498121" type="text/css">
+#container_201912061105498121  {background-image:url(/data/container/container_201912061105498121/20191206/891575601688.jpeg);}
+#container_201912061105498121  {background-position:50% 50%;}
+#container_201912061105498121  {background-repeat:no-repeat;}
+#container_201912061105498121  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912061105498121  {padding-top:40px;}
+#container_201912061105498121  {padding-bottom:40px;}
+#container_201912061105498121  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912061105498121  {background-position:no-repeat;}
+#container_201912061105498121  {background-attachment:scroll;}
+}
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019120611054985180" type="text/css">
+#dom_2019120611054985180  {background-position:no-repeat;}
+#dom_2019120611054985180  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#dom_2019120611054985180  {padding-left:100px;}
+#dom_2019120611054985180  {padding-right:100px;}
+#dom_2019120611054985180  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#dom_2019120611054985180  {background-position:no-repeat;}
+#dom_2019120611054985180  {background-attachment:scroll;}
+}
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout" layout_type="dom" id="dom_2019120611054985180">
+<div  class="module   " id="module_201912061106125130"     layout_htmid="253" layout_type="module" layout_data_type="0"  ><div id="body_module_201912061106125130"  class="body_module" layout_type="body"><style>
+.ModuleImageTextGiant.layout-253 .imageTextGiant-Container{height: auto; word-wrap: break-word;max-height: 100%;padding:10px;max-width: 100%; overflow: hidden;}.module_module_201912061106125130 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061106125130 {
+padding:0px;
+}
+#module_module_201912061106125130 {
+position:static;
+z-index:0;
+top:0px;
+width:100%;
+height: auto;
+}
+#module_module_201912061106125130 .ModuleHeadmodule_201912061106125130 {
+display:none;
+}
+
+#module_module_201912061106125130 .ModuleImageTextGiantContent{margin-top:0px;}
+#module_module_201912061106125130 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912061106125130 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912061106125130 .ModuleImageTextGiantContent{margin-right:0px;}
+#module_module_201912061106125130 .imageTextGiant-Container{padding-top:0px;}
+#module_module_201912061106125130 .imageTextGiant-Container{padding-bottom:0px;}
+#module_module_201912061106125130 .imageTextGiant-Container{padding-left:0px;}
+#module_module_201912061106125130 .imageTextGiant-Container{padding-right:0px;}
+ 
+</style>
+<div class="ModuleItem  StaticModule " wo="1592" id="module_module_201912061106125130" >
+<div class="ModuleImageTextGiant layout-253 layout-color-red module_module_201912061106125130 clearfix">
+   
+ <div class='BodyCenter BodyCentermodule_201912061106125130 clearfix'>
+ <div class="imageTextGiant-Container imageTextContainer imagetext_item clearfix"  >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+	 {foreach from=$moban_get_module_data_list(module_201912061106125130) item=item  name=item}
+	 {$item.content}
+	 {/foreach}   
+	</div>
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061106125130" type="text/css">
+#module_201912061106125130  {background-position:no-repeat;}
+#module_201912061106125130  {background-attachment:scroll;}
+#module_201912061106125130:hover  {background-position:no-repeat;}
+#module_201912061106125130:hover  {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item .imagetext_item_images {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item .imagetext_item_images {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item .imagetext_item_text {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item .imagetext_item_text {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item:hover {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item:hover {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_images {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_images {background-attachment:scroll;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_text {background-position:no-repeat;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_text {background-attachment:scroll;}
+#module_201912061106125130  {box-shadow: px px px px   ;}
+#module_201912061106125130:hover  {box-shadow: px px px px   ;}
+#module_201912061106125130  .imagetext_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item:hover {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item:hover .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061106125130  .imagetext_item .imagetext_item_text {color:rgba(255, 255, 255, 1);}
+@media screen and (min-width: 768px){
+#module_201912061106125130  {padding-bottom:40px;}
+#module_201912061106125130  {border-type:none;}
+#module_201912061106125130:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912061106125130{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061106125130{display:none;}
+}
+</style>
+<div  class="module   " id="module_201912061108289356"     layout_htmid="230" layout_type="module" layout_data_type="2"  ><div id="body_module_201912061108289356"  class="body_module" layout_type="body"><style>
+.ModuleCustomFormGiant.layout-230 .title {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 14px;
+    font-weight: normal;
+    min-height: 30px;
+}
+
+.ModuleCustomFormGiant.layout-230 input[type=text] {
+    line-height: 48px;
+    font-size: 14px;
+    border: none;
+    background: #fff;
+    padding: 0 0 0 10px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -moz-flex-grow: 1;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.ModuleCustomFormGiant.layout-230 textarea {
+    height: 80px;
+    font-size: 14px;
+    border: none;
+    background: #fff;
+    padding: 0 0 0 10px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -moz-flex-grow: 1;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.ModuleCustomFormGiant.layout-230 .Select_Simulate li:hover {
+    color: #fff
+}
+
+.ModuleCustomFormGiant.layout-230 .content-title {
+    font-size: 14px;
+    line-height: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .in-formList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ModuleCustomFormGiant.layout-230 .formList-content {
+    box-sizing: border-box;
+    border-radius: 0px;
+    margin-bottom: 16px;
+   
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox select {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -moz-flex-grow: 1;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: url(/skinp/modules/ModuleCustomFormGiant/images/arrow1.png) no-repeat center right;
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox .frist-city-select select {
+    border: 0;
+    border-radius: 0;
+    margin-right: 0;
+    background: none;
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox .frist-city-select .frist-city-title {
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox .frist-city-select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -moz-flex-grow: 1;
+    margin-right: 10px;
+    background: url(/skinp/modules/ModuleCustomFormGiant/images/arrow1.png) no-repeat center right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ModuleCustomFormGiant.layout-230 .choose-time-mobile {
+    font-size: 14px;
+}
+
+.ModuleCustomFormGiant.layout-230 .pcCitybox .Couty-select {
+    margin-right: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 input.VerificationCodeinput {
+    width: 188px;
+    line-height: 34px;
+    margin-right: 10px;
+    float: left;
+}
+
+.ModuleCustomFormGiant.layout-230 .VerificationCode {
+    width: 90px;
+    height: 50px;
+    display: inline-block;
+}
+
+
+.ModuleCustomFormGiant.layout-230 .file-box .Browse-file-input {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -moz-flex-grow: 1;
+    margin-right: 10px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+}
+
+.ModuleCustomFormGiant.layout-230 .file-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ModuleCustomFormGiant.layout-230 .Browse-file {
+    width: 90px;
+    line-height: 50px;
+    color: #333;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    font-size: 14px;
+    text-align: center;
+    height: 50px;
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-grow: 0;
+    -moz-flex-grow: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 3px
+}
+
+.ModuleCustomFormGiant.layout-230 .Browse-file:hover {
+    color: #666;
+    background: #eee;
+    border: 1px solid #ccc;
+}
+
+.ModuleCustomFormGiant.layout-230 .input-text-color {
+    color: #333;
+}
+
+.ModuleCustomFormGiant.layout-230 .Describ-text-color {
+    color: #333;
+}
+
+.ModuleCustomFormGiant.layout-230 .submibtn-color {
+    color: #fff;
+    background: #1e88e5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ModuleCustomFormGiant.layout-230 .Select_Simulate .Select_sanjiao {
+    border: 0;
+    height: 48px;
+    width: 30px;
+    background: url(/skinp/modules/ModuleCustomFormGiant/images/arrow1.png) no-repeat center right;
+    line-height: 48px;
+    margin: 0;
+}
+.ModuleCustomFormGiant.layout-230 .formList-content.mgb0{
+    margin-bottom: 0
+}
+.ModuleCustomFormGiant.layout-230 .in-formList-content.pdLf0{
+    padding-left: 0
+}
+.ModuleCustomFormGiant.layout-230  .Select_Simulate.layout2 li{
+    padding:0 16px;
+}
+.ModuleCustomFormGiant.layout-230 .Select_Simulate .frist_item {
+    padding-right: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .submitbtn {
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 16px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.ModuleCustomFormGiant.layout-230 .submibtn-color:hover {
+    color: #fff;
+    background: #1976d2;
+}
+
+.ModuleCustomFormGiant.layout-230 .pd-0 {
+    padding: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .formList-content-no-style .in-formList {
+    align-items: flex-start;
+}
+
+.ModuleCustomFormGiant.layout-230 .multi-row-text {
+    margin-top: 8px;
+    border: 0;
+    padding-left: 10px;
+}
+
+.ModuleCustomFormGiant.layout-230 .formList-content-no-border {
+    border: 0;
+    padding-left: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .in-formList-checkbox {
+    white-space:normal;
+}
+
+.ModuleCustomFormGiant.layout-230 .formList-content-no-border .in-formList {
+    align-items: flex-start;
+}
+
+.ModuleCustomFormGiant.layout-230 .content-title-checkbox {
+    float: left;
+}
+
+.ModuleCustomFormGiant .in-formList-checkbox label {
+    margin-right: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    color:#666;
+}
+
+.ModuleCustomFormGiant.layout-230 .choose-time {
+    border: none;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .chooseTimeicon {
+    margin-top: 17px;
+    margin-right: 10px;
+}
+
+.ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 210px;
+    margin-right: 8px;
+    padding-left: 16px;
+    display: inline-block;
+    height: 50px;
+}
+
+.ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb .input-text-checking {
+    width: 68%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.ModuleCustomFormGiant.layout-230 .changebtn {
+    line-height: 50px
+}
+
+.ModuleCustomFormGiant.layout-230 .cityPickerBox {
+    border: 0;
+}
+
+.ModuleCustomFormGiant.layout-230 .cityval {
+    line-height: 48px;
+    height: 48px
+}
+
+
+.ModuleCustomFormGiant.layout-230 .choose-city-content {
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.ModuleCustomFormGiant.layout-230 .cityPickerBoxwb {
+    height: 50px;
+}
+.ModuleCustomFormGiant.layout-230 .padL16{
+    padding-left:16px;
+    line-height: 1;
+    height: auto;
+    margin-top:4px;
+}
+.ModuleCustomFormGiant.layout-230 .padL16.radioBox{
+    margin-top: 8px
+}
+.ModuleCustomFormGiant.layout-230 .formList-content.mg0{
+    margin-bottom: 0
+}
+.ModuleCustomFormGiant.layout-230 .Select_Simulate.layout2 .frist_item{
+    padding-left:0;
+}
+.ModuleCustomFormGiant.layout-230 .in-formList-content {
+    border: 0px solid #ccc;
+    padding-left: 16px;
+    border-radius: 0px
+}
+.ModuleCustomFormGiant.layout-230 .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb .input-text-checking {
+        width: 120px;
+    }
+    .ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb {
+        width: 186px;
+    }
+    .ModuleCustomFormGiant.layout-230 .VerificationCode {
+        width: 90px;
+        height: 50px;
+    }
+    .ModuleCustomFormGiant.layout-230 .formList-content.mg0{
+        margin-bottom:16px;
+    }
+}
+@media screen and (max-width: 406px) {
+    .ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb .input-text-checking {
+        width: 100px;
+        padding: 0;
+    }
+    .ModuleCustomFormGiant.layout-230 .VerificationCodeinputWb {
+        width: 154px;
+        padding-left: 5px;
+    }
+    .ModuleCustomFormGiant.layout-230 .VerificationCode {
+        width: 90px;
+        height: 50px;
+    }
+    .ModuleCustomFormGiant.layout-230 .formList-content.mg0{
+        margin-bottom:16px;
+    }
+}.module_module_201912061108289356 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061108289356 {
+padding:0px;
+}
+#module_module_201912061108289356 {
+}
+#module_module_201912061108289356 .ModuleHeadmodule_201912061108289356 {
+display:none;
+}
+#module_module_201912061108289356 .BodyCenter.BodyCentermodule_201912061108289356 {
+background:none;
+}
+#module_module_201912061108289356 {
+border:none;
+}
+@media screen and (min-width: 768px){
+#module_module_201912061108289356 .BodyCenter.BodyCentermodule_201912061108289356 {
+padding-top:0px;
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+}
+}
+@media screen and (max-width: 767px){
+#module_module_201912061108289356 .BodyCenter.BodyCentermodule_201912061108289356 {
+padding-top:0px;
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+}
+}
+
+#module_module_201912061108289356 .title{font-size:24px;}
+#module_module_201912061108289356 .title{font-family:;}
+#module_module_201912061108289356 .title{color:#333;}
+#module_module_201912061108289356 .title{font-weight:normal;}
+#module_module_201912061108289356 .title{text-decoration:none;}
+#module_module_201912061108289356 .title{font-style:normal;}
+#module_module_201912061108289356 .title{background-color:transparent;}
+#module_module_201912061108289356 .title{}
+#module_module_201912061108289356 .title{background-repeat:no-repeat;}
+#module_module_201912061108289356 .title{background-position:50% 50%;}
+#module_module_201912061108289356 .title{background-attachment:scroll;}
+#module_module_201912061108289356 .title{height:50px;line-height:50px;}
+#module_module_201912061108289356 .title{text-align:center;}
+#module_module_201912061108289356 .Describ-text-color{font-size:14px;}
+#module_module_201912061108289356 .Describ-text-color{font-family:;}
+#module_module_201912061108289356 .Describ-text-color{color:#666;}
+#module_module_201912061108289356 .Describ-text-color{font-weight:normal;}
+#module_module_201912061108289356 .Describ-text-color{text-decoration:none;}
+#module_module_201912061108289356 .Describ-text-color{font-style:normal;}
+#module_module_201912061108289356 .submitbtn{font-size:16px;}
+#module_module_201912061108289356 .submitbtn{font-family:;}
+#module_module_201912061108289356 .submitbtn{color:#fff;}
+#module_module_201912061108289356 .submitbtn{font-weight:normal;}
+#module_module_201912061108289356 .submitbtn{text-decoration:none;}
+#module_module_201912061108289356 .submitbtn{font-style:normal;}
+#module_module_201912061108289356 .submitbtn{background-color:#1e88e5;} #module_module_201912061108289356 input[type=radio]:checked, #module_module_201912061108289356 input[type=checkbox]:checked{background:#1e88e5;border:1px solid #1e88e5}
+#module_module_201912061108289356 .submitbtn{}
+#module_module_201912061108289356 .submitbtn{background-repeat:no-repeat;}
+#module_module_201912061108289356 .submitbtn{background-position:50% 50%;}
+#module_module_201912061108289356 .submitbtn{background-attachment:scroll;}
+#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356 .formList-content-no-style,#module_module_201912061108289356 .customFormTextarea,#module_module_201912061108289356 .in-formList-content,#module_module_201912061108289356 .frist_item,#module_module_201912061108289356 .Browse-file-input,#module_module_201912061108289356 input[type=text],#module_module_201912061108289356 .VerificationCodeinputWb,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .pcCitybox select{background-color:initial;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-top-color:#ccc;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-top-style:solid;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-top-width:1px;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-right-color:#ccc;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-right-style:solid;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-right-width:1px;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-bottom-color:#ccc;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-bottom-style:solid;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-bottom-width:1px;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-left-color:#ccc;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .frist-city-select,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-left-style:solid;}
+#module_module_201912061108289356 .Pc-formList-content .in-formList-content,#module_module_201912061108289356 .VerificationCodeinput,#module_module_201912061108289356 .customFormCheckbox,#module_module_201912061108289356 input[type=radio],#module_module_201912061108289356  .in-formList-content,#module_module_201912061108289356 .Couty-select,#module_module_201912061108289356 .City-select,#module_module_201912061108289356 .VerificationCodeinputWb{border-left-width:1px;}
+#module_module_201912061108289356 .submitbtn:hover{font-size:16px;}
+#module_module_201912061108289356 .submitbtn:hover{font-family:;}
+#module_module_201912061108289356 .submitbtn:hover{color:#fff;}
+#module_module_201912061108289356 .submitbtn:hover{font-weight:normal;}
+#module_module_201912061108289356 .submitbtn:hover{text-decoration:none;}
+#module_module_201912061108289356 .submitbtn:hover{font-style:normal;}
+#module_module_201912061108289356 .submitbtn:hover{background-color:#1976d2;}
+#module_module_201912061108289356 .submitbtn:hover{}
+#module_module_201912061108289356 .submitbtn:hover{background-repeat:no-repeat;}
+#module_module_201912061108289356 .submitbtn:hover{background-position:50% 50%;}
+#module_module_201912061108289356 .submitbtn:hover{background-attachment:scroll;}
+#module_module_201912061108289356 .in-formList-content {border:0;padding: 0;}
+
+ 
+
+</style>
+<div class="ModuleItem"  id="module_module_201912061108289356" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleCustomFormGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleCustomFormGiant layout-230 layout-color-blue module_module_201912061108289356 clearfix">
+<div class='BodyCenter BodyCentermodule_201912061108289356 clearfix'>
+
+<form id="customFormmodule_201912061108289356" action="{if $smarty.get.sitelang neq 'lang'  }{$smarty.get.sitelang}-{/if}comment.html" method="post" class="Form-containt">
+
+        
+        <ul style="text-align:left;">
+
+            {foreach from=$moban_get_form_fields_list(module_201912061108289356) item=field  name=item}
+
+            {if $field.type eq 'text'}                              
+            <li class="customFormFieldItem formList-content form_item">
+                <div class="in-formList-content">
+                    <p class="in-formList">
+                      
+                        <input class="customFormText input-text-color form_item_desc" type="{$field.type}" name="seller_info[{$field.id}]" chname="{$field.reg_field_name}" isrequire="1" fieldtype="1" validatetype="1" placeholder="{$field.reg_field_name}">
+                    </p>
+                </div>
+            </li>
+            {/if}
+
+            {if $field.type eq 'textarea'} 
+            <li class="customFormFieldItem formList-content form_item">
+                <div class="in-formList-content">
+                    <p class="in-formList">
+                    <textarea class="customFormText input-text-color form_item_desc" name="seller_info[{$field.id}]" chname="{$field.reg_field_name}" isrequire="1" fieldtype="1" validatetype="1" placeholder="{$field.reg_field_name}">{$field.content}</textarea>
+                    </p>
+                </div>
+            </li>
+            {/if}
+
+            {if $field.type eq 'select'}                               .
+            <li class="customFormFieldItem formList-content form_item">
+                <div class="in-formList-content">
+                    <p class="in-formList">
+                      <select name="seller_info[{$field.id}]" class="customFormFieldItem Form-list">
+                        {foreach from=$field.select_options item=option}
+                        <option {if $field.content eq $option } selected="true" {/if} value="{$option}">{$option}</option>
+                        {/foreach}
+                </select>
+                    </p>
+                </div>
+            </li>
+            {/if}
+
+            {if $field.type eq 'checked'}                               .
+            <li class="customFormFieldItem formList-content form_item">
+                <div class="in-formList-content">
+                    <p class="in-formList">
+                      {foreach from=$field.select_options item=option}
+                        <label>
+                        <input class="customFormText input-text-color form_item_desc" type="checkbox" name="seller_info_{$field.id}[]" value="{$option}" class="customFormCheckbox"  />
+                        {$option}
+                        </label>
+                        {/foreach}
+                    </p>
+                </div>
+            </li>
+            {/if}
+
+            {if $field.type eq 'radio'}                               .
+            <li class="customFormFieldItem formList-content form_item">
+                <div class="in-formList-content">
+                    <p class="in-formList">
+                     {foreach from=$field.select_options item=option}
+                        <label>
+                        <input type="radio" name="seller_info[{$field.id}]" value="{$option}" class="customFormRadio "  />
+                        {$option}
+                        </label>
+                        {/foreach}
+                    </p>
+                </div>
+            </li>
+            {/if}
+         {/foreach}                           
+        <li class="formList-content form_item">
+		<input type="hidden" name="submitType" value="ajax" />
+<input type="hidden" id="Handelmodule_201912061108289356">
+<input type="hidden" name="ModuleID" value="module_201912061108289356">
+<input type="hidden" name="cat_id" value="{$cat_info.cat_id}">
+<input type="hidden" name="article_id" value="{$article.article_id}">
+<input type="hidden" name="FormType" value="message">
+
+            <input type="submit" class="customFormSubmit submitbtn submibtn-color form_item_submit"  value="{$lang.submit}">
+        </li>
+
+       
+    </ul>
+</form>
+
+
+</div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061108289356" type="text/css">
+#module_201912061108289356  {background-position:no-repeat;}
+#module_201912061108289356  {background-attachment:scroll;}
+#module_201912061108289356:hover  {background-position:no-repeat;}
+#module_201912061108289356:hover  {background-attachment:scroll;}
+#module_201912061108289356  .form_item {background-position:no-repeat;}
+#module_201912061108289356  .form_item {background-attachment:scroll;}
+#module_201912061108289356  .form_item .form_item_title {background-position:no-repeat;}
+#module_201912061108289356  .form_item .form_item_title {background-attachment:scroll;}
+#module_201912061108289356  .form_item .form_item_desc {background-position:no-repeat;}
+#module_201912061108289356  .form_item .form_item_desc {background-attachment:scroll;}
+#module_201912061108289356  .form_item .form_item_submit {background-color:#ff9900;}
+#module_201912061108289356  .form_item .form_item_submit {background-position:no-repeat;}
+#module_201912061108289356  .form_item .form_item_submit {background-attachment:scroll;}
+#module_201912061108289356  .form_item:hover {background-position:no-repeat;}
+#module_201912061108289356  .form_item:hover {background-attachment:scroll;}
+#module_201912061108289356  .form_item:hover .form_item_title {background-position:no-repeat;}
+#module_201912061108289356  .form_item:hover .form_item_title {background-attachment:scroll;}
+#module_201912061108289356  .form_item:hover .form_item_desc {background-position:no-repeat;}
+#module_201912061108289356  .form_item:hover .form_item_desc {background-attachment:scroll;}
+#module_201912061108289356  .form_item:hover .form_item_submit {background-position:no-repeat;}
+#module_201912061108289356  .form_item:hover .form_item_submit {background-attachment:scroll;}
+#module_201912061108289356  .form_item {text-align:right;}
+#module_201912061108289356  .form_item {border-top-left-radius:2px;}
+#module_201912061108289356  .form_item {border-top-right-radius:2px;}
+#module_201912061108289356  .form_item {border-bottom-left-radius:2px;}
+#module_201912061108289356  .form_item {border-bottom-right-radius:2px;}
+#module_201912061108289356  .form_item {border-top-width:1px;}
+#module_201912061108289356  .form_item {border-bottom-width:1px;}
+#module_201912061108289356  .form_item {border-left-width:1px;}
+#module_201912061108289356  .form_item {border-right-width:1px;}
+#module_201912061108289356  .form_item {border-top-style:none;}
+#module_201912061108289356  .form_item {border-bottom-style:none;}
+#module_201912061108289356  .form_item {border-left-style:none;}
+#module_201912061108289356  .form_item {border-right-style:none;}
+#module_201912061108289356  .form_item .form_item_desc {border-top-left-radius:2px;}
+#module_201912061108289356  .form_item .form_item_desc {border-top-right-radius:2px;}
+#module_201912061108289356  .form_item .form_item_desc {border-bottom-left-radius:2px;}
+#module_201912061108289356  .form_item .form_item_desc {border-bottom-right-radius:2px;}
+#module_201912061108289356  .form_item .form_item_desc {border-top-width:1px;}
+#module_201912061108289356  .form_item .form_item_desc {border-bottom-width:1px;}
+#module_201912061108289356  .form_item .form_item_desc {border-left-width:1px;}
+#module_201912061108289356  .form_item .form_item_desc {border-right-width:1px;}
+#module_201912061108289356  .form_item .form_item_desc {border-top-style:solid;}
+#module_201912061108289356  .form_item .form_item_desc {border-bottom-style:solid;}
+#module_201912061108289356  .form_item .form_item_desc {border-left-style:solid;}
+#module_201912061108289356  .form_item .form_item_desc {border-right-style:solid;}
+#module_201912061108289356  .form_item .form_item_desc {border-top-color:#e6e6e6;}
+#module_201912061108289356  .form_item .form_item_desc {border-bottom-color:#e6e6e6;}
+#module_201912061108289356  .form_item .form_item_desc {border-left-color:#e6e6e6;}
+#module_201912061108289356  .form_item .form_item_desc {border-right-color:#e6e6e6;}
+#module_201912061108289356  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356:hover  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item .form_item_title {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item .form_item_desc {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item .form_item_submit {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item:hover {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item:hover .form_item_title {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item:hover .form_item_desc {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item:hover .form_item_submit {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061108289356  .form_item .form_item_desc {color:#666;}
+#module_201912061108289356  .form_item .form_item_submit {height:38px;}
+#module_201912061108289356  .form_item .form_item_submit {line-height:38px;}
+#module_201912061108289356  .form_item .form_item_submit {width:100px;}
+@media screen and (min-width: 768px){
+#module_201912061108289356  {border-type:none;}
+#module_201912061108289356:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912061108289356{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061108289356{display:none;}
+}
+</style>
+</div>
+</div>
+</div>
+<div  layout_type="container" id="container_201912061108122061">
+<style id="style_container_201912061108122061" type="text/css">
+#container_201912061108122061  {background-color:#373737;}
+#container_201912061108122061  {background-position:no-repeat;}
+#container_201912061108122061  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912061108122061  {padding-top:20px;}
+#container_201912061108122061  {padding-bottom:20px;}
+#container_201912061108122061  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912061108122061  {background-position:no-repeat;}
+#container_201912061108122061  {background-attachment:scroll;}
+#container_201912061108122061  {padding-top:10px;}
+#container_201912061108122061  {padding-bottom:10px;}
+#container_201912061108122061  {padding-left:10px;}
+#container_201912061108122061  {padding-right:10px;}
+}
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019120611081232790" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout" layout_type="dom" id="dom_2019120611081232790">
+<div  class="module   " id="module_201912061127252418"     layout_htmid="31" layout_type="module" layout_data_type="0"  ><div id="body_module_201912061127252418"  class="body_module" layout_type="body"><style>
+.ModuleImageTextGiant.layout-31 .imageTextGiant-Container{height: auto; word-wrap: break-word;max-height: 100%;padding:0px;max-width: 100%; overflow: hidden;}.module_module_201912061127252418 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061127252418 {
+padding:0px;
+}
+#module_module_201912061127252418 {
+position:static;
+z-index:0;
+top:0px;
+width:100%;
+height: auto;
+}
+#module_module_201912061127252418 .ModuleHeadmodule_201912061127252418 {
+display:none;
+}
+
+#module_module_201912061127252418 .ModuleImageTextGiantContent{margin-top:0px;}
+#module_module_201912061127252418 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912061127252418 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912061127252418 .ModuleImageTextGiantContent{margin-right:0px;}
+
+#module_module_201912061127252418 .imageTextGiant-Container{padding-left:0px;}
+#module_module_201912061127252418 .imageTextGiant-Container{padding-right:0px;}
+</style>
+
+
+<div class="ModuleItem  StaticModule " wo="1592" id="module_module_201912061127252418" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleImageTextGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleImageTextGiant layout-31 layout-color-red module_module_201912061127252418 clearfix">
+            <!-- 头部 -->
+         
+        <!-- 主体 -->
+ <div class='BodyCenter BodyCentermodule_201912061127252418 clearfix'>
+ <div class="imageTextGiant-Container imageTextContainer clearfix imagetext_item" hasresponsive="1" autohide="0" hideheight="150" hidewidth="760" >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+	{foreach from=$moban_get_module_data_list(module_201912061127252418) item=item  name=item}
+	 {$item.content}
+	 {/foreach}   
+	</div>
+</div>
+<script>
+	//changeFontSize($('#module_module_201912061127252418'));
+	</script></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061127252418" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912061127252418{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061127252418{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,57 @@
+#<FilesMatch "\.(html|htm)$">
+#    order deny,allow
+#    deny from all
+    #Require all denied
+#</FilesMatch>
+
+RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^.com [NC]
+#RewriteRule ^(.*)$ http://www..com/$1 [L,R=301]
+#RewriteBase /
+
+RewriteRule ^(ecadmin|m|js|install)/(.*)$	$1/$2 [QSA,L]
+
+
+
+
+
+RewriteRule ^lang3-([0-9a-zA-Z_]+)-([0-9]+)-(.+)-([a-zA-Z]+)[\/]*$  article_cat\.php\?sitelang=lang3&defurl=$1&page=$2&sort=$3&order=$4  [QSA,L]
+RewriteRule ^lang3-([0-9a-zA-Z_]+)-([0-9]+)-(.+)[\/]*$              article_cat\.php\?sitelang=lang3&defurl=$1&page=$2&keywords=$3 [QSA,L]
+RewriteRule ^lang3-([0-9a-zA-Z_]+)-([0-9]+)[\/]*$                   article_cat\.php\?sitelang=lang3&defurl=$1&page=$2   [QSA,L]
+RewriteRule ^lang3-([0-9a-zA-Z_]+)[\/]*$                            article_cat\.php\?sitelang=lang3&defurl=$1   [QSA,L]
+RewriteRule ^lang3-(?:[0-9a-zA-Z_]+)/([0-9]+)(.*)\.html$            article\.php\?sitelang=lang3&id=$1   [QSA,L]
+
+
+RewriteRule ^lang2-([0-9a-zA-Z_]+)-([0-9]+)-(.+)-([a-zA-Z]+)[\/]*$  article_cat\.php\?sitelang=lang2&defurl=$1&page=$2&sort=$3&order=$4  [QSA,L]
+RewriteRule ^lang2-([0-9a-zA-Z_]+)-([0-9]+)-(.+)[\/]*$              article_cat\.php\?sitelang=lang2&defurl=$1&page=$2&keywords=$3 [QSA,L]
+RewriteRule ^lang2-([0-9a-zA-Z_]+)-([0-9]+)[\/]*$                   article_cat\.php\?sitelang=lang2&defurl=$1&page=$2   [QSA,L]
+RewriteRule ^lang2-([0-9a-zA-Z_]+)[\/]*$                            article_cat\.php\?sitelang=lang2&defurl=$1   [QSA,L]
+RewriteRule ^lang2-(?:[0-9a-zA-Z_]+)/([0-9]+)(.*)\.html$            article\.php\?sitelang=lang2&id=$1   [QSA,L]
+
+RewriteRule ^lang1-([0-9a-zA-Z_]+)-([0-9]+)-(.+)-([a-zA-Z]+)[\/]*$  article_cat\.php\?sitelang=lang1&defurl=$1&page=$2&sort=$3&order=$4  [QSA,L]
+RewriteRule ^lang1-([0-9a-zA-Z_]+)-([0-9]+)-(.+)[\/]*$              article_cat\.php\?sitelang=lang1&defurl=$1&page=$2&keywords=$3 [QSA,L]
+RewriteRule ^lang1-([0-9a-zA-Z_]+)-([0-9]+)[\/]*$                   article_cat\.php\?sitelang=lang1&defurl=$1&page=$2   [QSA,L]
+RewriteRule ^lang1-([0-9a-zA-Z_]+)[\/]*$                            article_cat\.php\?sitelang=lang1&defurl=$1   [QSA,L]
+RewriteRule ^lang1-(?:[0-9a-zA-Z_]+)/([0-9]+)(.*)\.html$            article\.php\?sitelang=lang1&id=$1   [QSA,L]
+RewriteRule ^lang1-search\.html$                     search\.php\?sitelang=lang1   [QSA,L]
+RewriteRule ^lang1-comment\.html$                     comment\.php\?sitelang=lang1   [QSA,L]
+
+
+RewriteRule ^([0-9a-zA-Z_]+)-([0-9]+)-(.+)-([a-zA-Z]+)[\/]*$  article_cat\.php\?sitelang=lang&defurl=$1&page=$2&sort=$3&order=$4  [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)-([0-9]+)-(.+)[\/]*$              article_cat\.php\?sitelang=lang&defurl=$1&page=$2&keywords=$3 [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)-([0-9]+)[\/]*$                   article_cat\.php\?sitelang=lang&defurl=$1&page=$2   [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)[\/]*$                            article_cat\.php\?sitelang=lang&defurl=$1   [QSA,L]
+RewriteRule ^(?:[0-9a-zA-Z_]+)/([0-9]+)(.*)\.html$            article\.php\?sitelang=lang&id=$1   [QSA,L]
+RewriteRule ^search\.html$                   search\.php\?sitelang=lang   [QSA,L]
+RewriteRule ^comment\.html$                   comment\.php\?sitelang=lang   [QSA,L]
+
+
+
+
+RewriteRule ^lang3\.html$          index\.php\?sitelang=lang3   [QSA,L]
+RewriteRule ^lang2\.html$          index\.php\?sitelang=lang2   [QSA,L]
+RewriteRule ^lang1\.html$          index\.php\?sitelang=lang1   [QSA,L]
+RewriteRule ^$                     index\.php\?sitelang=lang   [QSA,L]
+
+
+

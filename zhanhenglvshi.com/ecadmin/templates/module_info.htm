@@ -1,0 +1,259 @@
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>模块信息</title>
+		<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+		<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+		<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+		<script type="text/javascript">
+		var process_request = "正在加载。。。。";
+		</script>
+		{insert_scripts files="jquery-3.3.1.min.js,jquery.json.js,transport_bd.js,common.js"}
+		{insert_scripts files="../js/utils.js,listtable.js"}
+		<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+
+		<style>
+		.ur_here {
+		height:40px;
+		line-height:40px;
+		margin-bottom:5px;
+		padding-left:20px;
+		background-color:#fff;
+		}
+		.add_order_table{background:#fff;}
+		.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+		.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+		.b_gray{background:#ddd;color:#fff;}
+		.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+		.goods_remove_album{width:300px;height:300px;}
+		.goods_album {float:left;width:80%;}
+		.new_sanjiao {
+		float:left;
+		margin-top: 13px;
+		cursor: pointer;
+		width: 10px;
+		height: 10px;
+		}
+		.client-div-select {margin-right:5px;}
+		</style>
+		</head>
+
+		<body>
+		<div class="body_hei"></div>
+		<div class="body">
+		<div class="ur_here">当前位置 &gt; {$ur_here} - <a href="module.php?act=list">返回模块列表</a></div>
+
+		<form enctype="multipart/form-data" action="" method="post" name="theForm"  id="theForm" >
+
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody style="width:100%">
+
+
+		<tr >
+		<td width="30%" align="right">数据类型：</td>
+		<td>
+		   {if $module.module_data_type}系统数据{else}模块数据{/if}
+		 </td>
+		</tr>
+
+
+
+
+		{if $module.module_type eq 'search' || $module.module_type eq 'articlelist' || $module.module_type eq 'infolist' || $module.module_type eq 'catlist' || $module.module_type eq 'downlist' }
+		<tr>
+		<td width="30%" align="right">数据栏目：</td>
+		<td>
+		   <select name="dataid"   >
+			 <option value="0">顶级栏目</option>
+			{foreach from=$articlecat item=cat}
+			<option value="{$cat.cat_id}"  urlid="{$cat.cat_id}" moban="{$cat.moban}"  smallmoban="{$cat.smallmoban}"    {if $module.base.dataid eq $cat.cat_id}selected="ture"{/if} >{if $cat.level eq 1}&nbsp;&nbsp;{/if}{if $cat.level eq 2}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if}{if $cat.level eq 3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if} {$cat.cat_name}</option>
+			{/foreach}
+		  </select>
+
+
+		  
+
+		 </td>
+		</tr>
+		{/if}
+
+
+
+		{if  $module.module_type eq 'map' }
+
+		<tr style="width:100%;">
+		<td width="30%" align="right">标题：</td>
+		<td>
+		<input  name="title" value="{$module.base.title}" placeholder="请填标题" style="width:300px;height:27px;cursor:text;" required="true">
+		</td>
+		</tr>
+
+		<tr style="width:100%;">
+		<td width="30%" align="right">经度：</td>
+		<td>
+		<input  name="longitude" value="{$module.base.longitude}" placeholder="请填经度" style="width:300px;height:27px;cursor:text;" required="true">
+		<a href="https://lbs.qq.com/tool/getpoint/" target=_blank>获取</a>
+		</td>
+		</tr>
+
+
+		<tr style="width:100%;">
+		<td width="30%" align="right">炜度：</td>
+		<td>
+		<input  name="latitude" value="{$module.base.latitude}" placeholder="请填炜度" style="width:300px;height:27px;cursor:text;" required="true">
+		<a href="https://lbs.qq.com/tool/getpoint/" target=_blank>获取</a>
+		</td>
+		</tr>
+
+		{/if}
+
+		{if  $module.module_type eq 'video' }
+		<textarea name="videosrc" id="videosrc" cols="40" rows="1"   placeholder="请填视频信息">{$article.videosrc}</textarea>
+		{/if}
+
+
+
+
+
+
+
+
+
+
+
+
+		<tr>
+
+
+
+
+
+
+
+		<tr style="width:100;height:10px;"></tr>
+
+		</tbody>
+		</table>
+
+
+
+
+		<!--只有搜索才支持-->
+		{if $module.module_data_type}
+		<div class="floor_operation a_center">
+		<input type="hidden" name="id" value="{$module.module_id}" />
+		<input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+		</div>
+		<input type="hidden" name="act" value="{$form_action}" />
+		{/if}
+
+		</div>
+		</form>
+
+
+
+
+
+
+
+		{if !$module.module_data_type}
+
+		<div class="body" >
+		<div class="order_list">
+		<table class="table-hover" cellspacing="0" cellpadding="0" border="0" id="list-table">
+		<thead style="background-color:rgb(224,224,224);">
+		<tr>
+		<td>id</td>
+		<td>标题</td>
+		<td>操作</td>
+		</tr>
+		</thead>
+		{foreach from=$itemlist item=item name=item key=key}
+		<tr>
+		<td class="first-cell" >{$key}</td>
+		<td class="first-cell" >{$item.title}</td>
+		<td align="center"><a onclick="edit_data({$key})" >编辑</a> <a onclick="drop_data({$key})" >删除</a> </td>
+		</tr>
+		{/foreach}
+		<tr style="width:100%;height:10px"></tr>
+		</table>
+
+
+		<div class="floor_operation a_center">
+		<div class="add_order" id="add_cus" onclick="add_data('{$module.module_id}')"  style="background:#FF8400; color:#fff; border:none;" >添加信息</div>
+		</div>
+
+
+		</div>
+		</div>
+
+
+		{/if}
+
+
+
+
+
+
+		</div>
+
+
+
+		<div id="edit-data-form"> </div>
+
+
+
+
+
+		<script type="Text/Javascript" language="JavaScript">
+
+
+		function edit_data(data_id){
+
+		$.ajax({
+		type: "POST",
+		url: "module.php?act=ajax_data_edit",
+		data: {module_id:'{$module.module_id}',data_id:data_id},
+		dataType: "json",
+		success: function(result){
+		 $('#edit-data-form').html(result.content[0].str);
+		}
+		});
+		}
+
+		function add_data(module_id){
+
+		$.ajax({
+		type: "POST",
+		url: "module.php?act=ajax_data_add",
+		data: {module_id:'{$module.module_id}'},
+		dataType: "json",
+		success: function(result){
+		 $('#edit-data-form').html(result.content[0].str);
+		}
+		});
+		}
+
+
+		function drop_data(data_id){
+		$.ajax({
+		type: "POST",
+		url: "module.php?act=ajax_data_drop",
+		data: {module_id:'{$module.module_id}',data_id:data_id},
+		dataType: "json",
+		success: function(result){
+		 $('#edit-data-form').html(result.content[0].str);
+		}
+		});
+		}
+
+
+		</script>
+
+		{insert_scripts files="bootstrap.js"}
+
+
+		</body></html>

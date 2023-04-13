@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>分类信息</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" charset="utf-8" src="My97DatePicker/WdatePicker.js"> </script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+<style>
+	.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.add_order_table{background:#fff;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+	float:left;
+	margin-top: 13px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+.client-div-select {margin-right:5px;}
+</style>
+</head>
+
+<body>
+	<div class="body_hei"></div>
+	<div class="body">
+		<div class="ur_here">当前位置 &gt; {$ur_here} - <a href="privilege.php?act=list">管理员列表</a></div>
+		
+	<form name="theForm" method="post" enctype="multipart/form-data" onsubmit="return validate();">
+
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody style="width:100%">
+			
+			<tr style="width:100%;">
+				<td width="30%" align="right">管理员名称：</td>
+				<td>
+					<input  name="user_name" value="{$user.user_name|escape}" placeholder="管理员名称" style="width:350px;height:27px;cursor:text;" required="true">
+			
+				</td>
+			</tr>
+			  
+
+
+
+
+
+
+               {if $action eq "add"}
+               <tr>
+				<td width="30%" align="right">输入密码：</td>
+				<td><input type="password" name="password"  /></td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">确认密码：</td>
+				<td><input type="password" name="pwd_confirm"  /></td>
+			  </tr>
+			  {/if}
+			  {if $action eq "edit"}
+			  <tr>
+				<td width="30%" align="right">新密码：</td>
+				<td><input type="password" name="new_password"  /></td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">确认密码：</td>
+				<td><input type="password" name="pwd_confirm"  /></td>
+			  </tr>
+               {/if}
+			   {if $action eq "modif"}
+			  <tr>
+				<td width="30%" align="right">新密码：</td>
+				<td><input type="password" name="new_password"  /></td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">确认密码：</td>
+				<td><input type="password" name="pwd_confirm"  /></td>
+			  </tr>
+               {/if}
+			   
+
+               {if $smarty.session.admin_id eq '1'}
+               {if $select_role}
+			   <tr>
+				<td width="30%" align="right">选择角色：</td>
+				<td><select name="select_role">
+        <option value="">{$lang.select_please}</option>
+        {foreach from=$select_role item=list}
+        <option value="{$list.role_id}" {if $list.role_id eq $user.role_id} selected="selected" {/if} >{$list.role_name}</option>
+        {/foreach}
+      </select></td>
+			  </tr>
+              {/if}
+			  {/if}
+			  <tr style="width:100;height:10px;"></tr>
+			
+			</tbody>
+		</table>
+		
+		
+
+
+		
+		
+		<div class="floor_operation a_center">
+		
+          <input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+          <input type="reset" value="{$lang.button_reset}" class="input_button" />
+	
+
+
+
+        </div>
+        <input type="hidden" name="act" value="{$form_act}" />
+		</div>
+		</form>
+	</div>
+
+
+
+
+</body></html>

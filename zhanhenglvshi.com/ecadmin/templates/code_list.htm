@@ -1,0 +1,173 @@
+{if $full_page eq 1}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>渠道列表</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+.sign_ul{width:170px;position:absolute;left:-60px;top:30px;background:#fff;border:1px solid #ccc;}
+.sign_ul li{width:100%;height:20px;line-height:20px;font-size:14px;text-align:left;cursor:pointer;text-indent:10px;}
+.sign_ul li input{width:70px;line-height:20px;font-size:12px;float:left;color:#999;text-indent:0px;}
+.sign_ul .sign_last{cursor:auto;}
+
+.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="body_hei"></div>
+<div class="body" 	id="listDiv">
+{/if}
+		<div class="ur_here">当前位置 &gt; 渠道列表</div>
+		
+		<div class="search">
+
+        <div class="operation" style="width:200px;">
+				 <div class="add_order" id="add_cus" onclick="location.href='code_manage.php?act=add'" style="background:#FF8400; color:#fff; border:none;">新建渠道</div> 
+				<div class="add_order" onclick="deletes('del')">批量删除(<span id="order_num">0</span>)</div>
+			</div>
+
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  
+			  <div class="modal-body">
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div id="is_modal">
+			
+			<div class="is_modal_title">
+				<div class="is_modal_x" onclick="close_div('is_modal')">X</div>
+				<div>弹出框</div>
+			</div>
+			<div class="is_modal_content">
+				
+			</div>
+			<div class="is_modal_floor">
+				<button type="button" class="is_modal_close" onclick="close_div('is_modal')">关闭</button>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+
+
+		<div class="order_list" >
+			<table class="table-hover" cellspacing="0" cellpadding="0" border="0">
+			<thead style="background-color:rgb(224,224,224);">
+				<tr>
+				    <td width="5%"><input name="test" onclick="checkAll(this)" type="checkbox"></td>
+					<td class="colum_2">标识</td>
+					<td class="colum_3">渠道标题</td>
+					<td class="colum_4">预定数量</td>
+					<td >操作</td>
+				</tr>
+			</thead>
+				<tbody>	
+				 {foreach from=$code_list item=list}
+				<tr>
+				<td><input onclick="sumCheckbox()" name="box[]" value="{$list.code_id}" type="checkbox"></td>
+					<td>from={$list.code_id}</td>
+					<td class="colum_2" >{$list.title}</td>
+					<td class="colum_3" >{$list.ccount}</td>
+					<td>
+						<a class="glyphicon glyphicon-pencil" href="code_manage.php?act=edit&id={$list.code_id}" title="编辑"></a>
+						<div class="glyphicon glyphicon-trash" onclick="listTable.remove({$list.code_id}, '确定删除？')" title="删除"></div
+					</td>
+				</tr>
+				{foreachelse}
+					<tr><td  colspan="10">没有记录</td></tr>
+				  {/foreach}
+				
+				</tbody></table>
+		</div>
+		<div class="searchRight_paging">
+			<div id="pager" class="pagebar">
+				{include file="page.htm"}
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="floor_operation">
+		
+		</div>
+<script>
+
+listTable.recordCount = {$record_count};
+listTable.pageCount = {$page_count};
+
+{foreach from=$filter item=item key=key}
+listTable.filter.{$key} = '{$item}';
+{/foreach}
+
+// 全选、取消全选  
+function checkAll(obj){
+	if(obj){
+		var is_checked = obj.checked;
+		if(is_checked == true){
+			$('input[name="box[]"]').each(function(i,e){
+				$(e)[0].checked = true;
+			});
+			sumCheckbox();
+		}else{
+			$('input[name="box[]"]').each(function(i,e){
+				$(e)[0].checked = false;
+			});
+			sumCheckbox();
+		}
+	}
+}
+function close_div(name){
+	$("#"+name).hide();
+	$('.body_hei').hide();
+}
+
+// 统计已选中多选框个数
+function sumCheckbox(){
+	var num = $('input[name="box[]"]:checked').length;
+	$('#order_num').text(num);
+}
+
+// 批量操作
+function deletes(){
+	var id = [];
+	$('input[name="box[]"]:checked').each(function(){
+		id.push($(this).val());
+	});
+	if(id.length > 0){
+		if(confirm('警告：确定要删除选中的渠道吗？')){
+			$.post('code_manage.php?act=batch',{id:id},function(data){
+				fun('code_manage.php?act=list');
+			},'json');
+		}
+	}else{
+		alert('请选择要操作的渠道');
+	}
+}
+function fun(url) {
+	window.location.href = url; 
+} 
+
+
+</script>
+{if $full_page eq 1}
+</div>
+</body></html>
+{/if}

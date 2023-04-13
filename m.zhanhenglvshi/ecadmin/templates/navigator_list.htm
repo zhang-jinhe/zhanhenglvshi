@@ -1,0 +1,166 @@
+{if $full_page eq 1}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>菜单管理</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+.sign_ul{width:170px;position:absolute;left:-60px;top:30px;background:#fff;border:1px solid #ccc;}
+.sign_ul li{width:100%;height:20px;line-height:20px;font-size:14px;text-align:left;cursor:pointer;text-indent:10px;}
+.sign_ul li input{width:70px;line-height:20px;font-size:12px;float:left;color:#999;text-indent:0px;}
+.sign_ul .sign_last{cursor:auto;}
+
+.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+</style>
+</head>
+
+<body>
+<div class="body_hei"></div>
+<div class="body" 	id="listDiv">
+{/if}
+<div class="ur_here">当前位置 &gt; 菜单管理</div>
+		
+
+<div class="search">
+
+        <div class="operation" style="width:200px;">
+				 <div class="add_order" id="add_cus" onclick="location.href='navigator.php?act=add'" style="background:#FF8400; color:#fff; border:none;">新建菜单</div> 
+				
+			</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="order_list">
+			<table class="table-hover" cellspacing="0" cellpadding="0" border="0">
+			<thead style="background-color:rgb(224,224,224);">
+				<tr>
+					<td>ID</td>
+					
+					<td >菜单名</td>
+					<td class="colum_2">是否显示</td>
+					<td class="colum_2">类型</td>
+					<td class="colum_2">排序</td>
+					<td >操作</td>
+				</tr>
+			</thead>
+				<tbody>
+				
+				{foreach from=$navigator item=val}
+				<tr>
+					<td>{$val.id}</td>
+					<td class="colum_2">
+		{$val.cat_name}
+		  </td>
+					<td>
+					
+   <!-- {if $val.id} -->
+   <img src="images/{if $val.ifshow eq '1'}yes{else}no{/if}.gif" onclick="is_show({$val.id})" />
+   <!-- {/if} -->
+
+	  
+	  </td>
+
+	  	
+
+
+
+	  	<td class="colum_2">
+		{if $val.type eq top}顶部导航{/if}
+		{if $val.type eq middle}中间导航{/if}
+		{if $val.type eq bottom}底部导航{/if}
+		  </td>
+
+
+					<td class="colum_2">
+
+					<span class="sort_order" style="display: inline-block;*display: inline;width:100%;cursor: pointer;">{$val.vieworder}</span>
+                    <span class="textInput" style="display: none;">
+	                <input type="hidden" name="id" value="{$val.id}"><input name="sort_order" type="text" value="{$val.vieworder}"><span class="postsort_order">确定</span>
+                    </span>
+
+
+
+</td>
+					<td class="colum_2">
+					
+					<a class="glyphicon glyphicon-pencil" href="navigator.php?act=edit&id={$val.id}" title="编辑"></a>
+					
+					<div class="glyphicon glyphicon-trash" onclick="listTable.remove({$val.id}, '确定删除？')" title="删除"></div</td>
+					
+				
+				</tr>
+			{/foreach}
+				</tbody></table>
+		</div>
+		
+		<div class="floor_operation">
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  
+		  <div class="modal-body">
+		  </div>
+		</div>
+	  </div>
+	</div>
+<script>
+$(function(){
+    $(".sort_order").click(function(){
+        $(this).hide();
+        $(this).next().fadeIn('slow');
+    })
+    $(".postsort_order").click(function(){
+        var thisnote = $(this);
+        var sort_order = thisnote.parent().find('input[name="sort_order"]').val();
+        var id = thisnote.parent().find('input[name="id"]').val();
+        var url = 'navigator.php?act=edit_sort_order';
+        $.post(url,{sort_order:sort_order,id:id},function(data){
+            if(data){
+                thisnote.parent().hide();
+                thisnote.parent().prev().html(sort_order).fadeIn();
+            }else{
+                thisnote.parent().html('保存失败');
+            }
+        })
+    })
+})
+
+function is_show(id){
+$.ajax({
+	type: "POST",
+	url: "navigator.php?act=is_show",
+	data: {id:id},
+	dataType: "json",
+	success: function(result){
+	location.reload();
+	}
+});
+}
+</script>
+
+{if $full_page eq 1}
+</div>
+</body></html>
+{/if}

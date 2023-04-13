@@ -1,0 +1,665 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+
+<meta name="page-type" cid=""   aid=""  content="contact"  />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<script type="text/javascript" src="/skinp/js/PageJs.js"></script>
+<script src="/skinp/common/js/layer/layer.js" /></script><!--<edit_include_js_css>-->
+<link rel="stylesheet" href="/scripts/swiper.animate/animate.min.css"  type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/ModuleMobileNavTpl.css" type="text/css"/>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="/scripts/swiper2/css/idangerous.swiper.css">
+<script type="text/javascript" src="/scripts/swiper2/js/idangerous.swiper.min.js"></script>
+<![endif]-->
+<!--[if gt IE 9]>
+<link rel="stylesheet" type="text/css" href="/scripts/Swiper-3.4.0/css/swiper.min.css"/>
+<script type="text/javascript" src="/scripts/Swiper-3.4.0/js/swiper.min.js"></script>
+<![endif]-->
+<!--[if !IE]>
+<!-->
+<link rel="stylesheet" type="text/css" href="/scripts/Swiper-3.4.0/css/swiper.min.css"/>
+<script type="text/javascript" src="/scripts/Swiper-3.4.0/js/swiper.min.js"></script>
+<!--<![endif]--><script type="text/javascript" src="/scripts/swiper.animate/swiper.animate1.0.2.min.js"></script>
+<link rel="stylesheet" href="/skinp/css/ModuleStyleMobile.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/fontawesome/css/font-awesome.min.css" type="text/css"/>
+<link rel="stylesheet" href="/scripts/iconfont/iconfont.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/jquery-ui.min.css" type="text/css"/>
+</head><body id="contact" ><!--<edit_header>-->
+{include file="header.shtml"}<div id="contentcontainer" layout_type="zone" class="contentcontainer lyrow">
+<div id="contentzonecontainer" layout_type="zonecontainer" class="contentzonecontainer">
+<div  layout_type="container" id="container_201912061210364432">
+<style id="style_container_201912061210364432" type="text/css">
+</style>
+<div class="row clearfix  allcontainer" layout_type="domcontainer">
+<style id="style_dom_2019120612103613180" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout"   layout_type="dom" id="dom_2019120612103613180">
+<div  class="module   " id="module_201912061210532602"     layout_htmid="652" layout_type="module" layout_data_type="0"  ><div id="body_module_201912061210532602"  class="body_module" layout_type="body"><style>
+/*轮播图样式*/
+
+/*切换按钮样式*/
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-container{ position: relative;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev{ position: absolute; width: 81px; height: 82px; background: rgba(0,0,0,0.2);top:50%;z-index: 9999;
+    transform : translate(0,-50%);
+    -webkit-transform:translate(0,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(0,-50%);       /* for Firefox */
+    -ms-transform:translate(0,-50%);       /* for IE */
+    -o-transform: translate(0,-50%);        /* for Opera */
+    transition: all .3s
+}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next:hover,.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:hover{background: rgba(0,0,0,0.4);}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next{left: 0; cursor: pointer;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev{right: 0;cursor: pointer;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next:before{ content: ""; position: absolute;
+    top:50%; left: 50%; width: 17px; height:30px; background: #fff;
+    transform : translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:translate(-50%,-50%);       /* for IE */
+    -o-transform: translate(-50%,-50%);
+    background: url("/images/pres.png") no-repeat center;
+    background-size: 100%;
+}
+
+
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:before{ content: ""; position: absolute;
+    top:50%; left: 50%; width: 17px; height:30px; background: #fff;
+    transform : translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:translate(-50%,-50%);       /* for IE */
+    -o-transform: translate(-50%,-50%);
+    background: url("/images/nexts.png") no-repeat center;
+    background-size: 100%;
+}
+/*.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:after{ content: ""; position: absolute;*/
+    /*top:44%; right: 652%; width: 2px; height:20px; background: #fff;*/
+    /*-webkit-transform: rotate(-135deg);   !* for Chrome || Safari *!*/
+    /*-moz-transform:  rotate(-135deg);       !* for Firefox *!*/
+    /*-ms-transform:   rotate(-135deg);        !* for IE *!*/
+    /*-o-transform:   rotate(-135deg);       !* for Opera *!*/
+    /*transform: rotate(-135deg);*/
+/*}*/
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet{width: 16px;  height: 16px; border-radius: 8px;border: 0;  background: rgba(0, 0, 0, 0); position: relative; opacity: 1;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet:before{ content: ""; width: 8px; height: 8px; background: #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);   /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:  translate(-50%,-50%);        /* for IE */
+    -o-transform:  translate(-50%,-50%);
+}
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet-active{background: rgba(0, 0, 0, 0.21); }
+/*.forie .swiper-container {height: 600px;}*/
+.forie .swiper-pagination {  position: absolute;  left: 0;  text-align: center;  bottom:5px;  width: 100%;  }
+.forie .swiper-pagination-switch{display: inline-block;width: 16px;  height: 16px; border-radius: 8px;border: 0;  background: rgba(0, 0, 0, 0); position: relative; opacity: 1; margin: 0 5px;}
+.forie .swiper-pagination-switch:before{ content: ""; width: 8px; height: 8px; background: #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%;    transform: translate(-50%,-50%);webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%);  -ms-transform: translate(-50%,-50%);  -o-transform: translate(-50%,-50%);}
+.forie .swiper-active-switch{background: rgba(0, 0, 0, 0.21); }
+@media only screen and (max-width: 480px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+.module_module_201912061210532602 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061210532602 {
+padding:0px;
+}
+#module_module_201912061210532602 {
+}
+#module_module_201912061210532602 .ModuleHeadmodule_201912061210532602 {
+display:none;
+}
+
+</style><div class="ModuleItem  "  id="module_module_201912061210532602" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleSlideGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleSlideGiant layout-652 layout-color- module_module_201912061210532602 clearfix">
+            <!-- 头部 -->
+        
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCentermodule_201912061210532602 clearfix'><div class="slidegiant-container" >
+    <div class="swiper-container slideshow-1" >
+        <div class="swiper-wrapper">
+		{foreach from=$moban_get_module_data_list(module_201912061210532602) item=item  name=item}
+                        <div class="swiper-slide"> <a href="{$item.url} "><img src="{$item.thumb} " alt="" title="" class="img-responsive"></a></div>
+						{/foreach}
+                    </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+      
+    </div>
+    <script>
+        //            var swiper = new Swiper('#module_module_201912061210532602 .swiper-container', {
+        //                pagination: '.swiper-pagination',
+        //                nextButton: '.swiper-slideshow-1-prev ',
+        //                prevButton: '.swiper-slideshow-1-next',
+        //                slidesPerView: 1,
+        //                paginationClickable: true,
+        //                speed:1000,
+        ////                spaceBetween: 10,
+        //                autoplay:2 * 1000
+        //
+        //        });
+    (function (){
+        var swiper;    
+        var initSwiperFunc = function () {
+            if(swiper)swiper.destroy(true, true);
+            function swipertwolayout104(ModuleID) {
+                $('#module_'+ModuleID+" .slidegiant-container").addClass("fornotie")
+                swiper = new Swiper('#module_'+ModuleID+' .swiper-container', {
+                    pagination: '#module_'+ModuleID+' .swiper-pagination',
+                    nextButton: '#module_'+ModuleID+' .swiper-slideshow-1-prev ',
+                    prevButton: '#module_'+ModuleID+' .swiper-slideshow-1-next',
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    autoplayDisableOnInteraction:false,
+                    speed:2 * 1000,
+                    autoplay:2 * 1000,
+                    loop : true,
+                    loopAdditionalSlides : 2
+
+            });
+            }
+            $(document).ready(function () {
+                var DEFAULT_VERSION = 9;
+                var ua = navigator.userAgent.toLowerCase();
+                var isIE = ua.indexOf("msie") > -1;
+                var safariVersion;
+                if (isIE) {
+                    safariVersion = ua.match(/msie ([\d.]+)/)[1];
+                    var sa = parseInt(safariVersion);
+                    if (safariVersion <= DEFAULT_VERSION) {
+                        //ie9以下，调用swiper2
+                        $("#module_module_201912061210532602 .slidegiant-container").addClass("forie")
+                        swiper = new Swiper('#module_module_201912061210532602 .swiper-container', {
+
+                            loop: true,//可选选项，开启循环
+                            speed: 2 * 1000,
+                            autoplayDisableOnInteraction: false,
+                            keyboardControl: true,//键盘滚动
+                            calculateHeight: true,//自动高度
+                            pagination: '#module_module_201912061210532602 .swiper-pagination',
+                            paginationClickable: true,//点击分页器的指示点时会发生Swiper。
+                            autoplay: 2 * 1000,//可选选项，自动滑动
+//                            onSlideChangeStart: function(){ setHeight() },
+//                            onSwiperCreated: function(){ setHeight() }
+
+                    });
+
+                        $('#module_module_201912061210532602 .swiper-slideshow-1-next').on('click', function(e){
+                            e.preventDefault()
+                            swiper.swipePrev()
+                        })
+                        $('#module_module_201912061210532602 .swiper-slideshow-1-prev').on('click', function(e){
+                            e.preventDefault()
+                            swiper.swipeNext()
+                        })
+                        $(window).resize(function () {
+                            swiper.reInit();
+                        });
+                        $('#module_module_201912061210532602 .forie .swiper-container').height( $(mySwiper.activeSlide()).find("img").height() );
+
+                    } else {
+                        //ie9以上，调用swiper3
+                        swipertwolayout104('module_201912061210532602')
+                    }
+                } else {
+                    //非ie
+                    swipertwolayout104('module_201912061210532602')
+                }
+            });
+        }
+        if($('#module_module_201912061210532602' + ' .slidegiant-container').is(':visible')){
+            initSwiperFunc()
+        }
+        window["initSwiperFuncmodule_201912061210532602"] = function()
+        {
+            initSwiperFunc()
+        }
+    })()    
+    </script>
+</div></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061210532602" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912061210532602{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061210532602{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+<div  layout_type="container" id="container_201912061210388071">
+<style id="style_container_201912061210388071" type="text/css">
+#container_201912061210388071  {background-position:no-repeat;}
+#container_201912061210388071  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912061210388071  {padding-top:50px;}
+#container_201912061210388071  {padding-bottom:50px;}
+#container_201912061210388071  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912061210388071  {background-position:no-repeat;}
+#container_201912061210388071  {background-attachment:scroll;}
+#container_201912061210388071  {padding-top:30px;}
+#container_201912061210388071  {padding-bottom:30px;}
+#container_201912061210388071  {padding-left:10px;}
+#container_201912061210388071  {padding-right:10px;}
+}
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019120612103838450" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout"   layout_type="dom" id="dom_2019120612103838450">
+<div  class="module   " id="module_201912061211374130"     layout_htmid="253" layout_type="module" layout_data_type="0"  ><div id="body_module_201912061211374130"  class="body_module" layout_type="body"><style>
+.ModuleImageTextGiant.layout-253 .imageTextGiant-Container{height: auto; word-wrap: break-word;max-height: 100%;padding:10px;max-width: 100%; overflow: hidden;}.module_module_201912061211374130 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061211374130 {
+padding:0px;
+}
+#module_module_201912061211374130 {
+position:static;
+z-index:0;
+top:0px;
+width:100%;
+height: auto;
+}
+#module_module_201912061211374130 .ModuleHeadmodule_201912061211374130 {
+display:none;
+}
+
+#module_module_201912061211374130 .ModuleImageTextGiantContent{margin-top:0px;}
+#module_module_201912061211374130 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912061211374130 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912061211374130 .ModuleImageTextGiantContent{margin-right:0px;}
+#module_module_201912061211374130 .imageTextGiant-Container{padding-top:0px;}
+#module_module_201912061211374130 .imageTextGiant-Container{padding-bottom:0px;}
+#module_module_201912061211374130 .imageTextGiant-Container{padding-left:0px;}
+#module_module_201912061211374130 .imageTextGiant-Container{padding-right:0px;}
+ 
+</style>
+<div class="ModuleItem  StaticModule " wo="1592" id="module_module_201912061211374130" >
+<div class="ModuleImageTextGiant layout-253 layout-color-red module_module_201912061211374130 clearfix">
+   
+ <div class='BodyCenter BodyCentermodule_201912061211374130 clearfix'>
+ <div class="imageTextGiant-Container imageTextContainer imagetext_item clearfix"  >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+	 {foreach from=$moban_get_module_data_list(module_201912061211374130) item=item  name=item}
+	 {$item.content}
+	 {/foreach}   
+	</div>
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061211374130" type="text/css">
+#module_201912061211374130  {background-position:no-repeat;}
+#module_201912061211374130  {background-attachment:scroll;}
+#module_201912061211374130:hover  {background-position:no-repeat;}
+#module_201912061211374130:hover  {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item .imagetext_item_images {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item .imagetext_item_images {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item .imagetext_item_text {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item .imagetext_item_text {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item:hover {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item:hover {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_images {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_images {background-attachment:scroll;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_text {background-position:no-repeat;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_text {background-attachment:scroll;}
+#module_201912061211374130  {box-shadow: px px px px   ;}
+#module_201912061211374130:hover  {box-shadow: px px px px   ;}
+#module_201912061211374130  .imagetext_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211374130  .imagetext_item .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211374130  .imagetext_item .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211374130  .imagetext_item:hover {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211374130  .imagetext_item:hover .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+@media screen and (min-width: 768px){
+#module_201912061211374130  {padding-bottom:40px;}
+#module_201912061211374130  {border-type:none;}
+#module_201912061211374130:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+#module_201912061211374130  {padding-bottom:20px;}
+}
+@media screen and (min-width: 768px){
+#body_module_201912061211374130{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061211374130{display:block}
+}
+</style>
+<div  class="module   " id="module_201912061211493187"     layout_htmid="558" layout_type="module" layout_data_type="2"  ><div id="body_module_201912061211493187"  class="body_module" layout_type="body"><style class='styleForModule_module_201912061211493187' type='text/css'>/*鍦板浘妯″潡*/
+.ModuleMapGiant.layout-558 .mapgiant-container .mapContainer{height:400px;color:#000;}
+.ModuleMapGiant.layout-558 .mapgiant-container iframe{overflow: hidden;}
+.ModuleMapGiant.layout-558 .mapgiant-container a.IMPanel:link,.ModuleMapGiant.layout-558 .mapgiant-container a.IMPanel:visited,.ModuleMapGiant.layout-558 .mapgiant-container a.IMPanel:hover{color: #000;}
+.ModuleMapGiant.layout-558 .mapContainer input[type=checkbox]{top:-1px;}
+.ModuleMapGiant.layout-558 .mapContainer input[type=checkbox]:checked::before{left:2px;}
+.ModuleMapGiant.layout-558 .mapContainer label{margin-bottom: 0}
+.ModuleMapGiant.layout-558{position: relative; z-index: 1;}
+
+
+.module_module_201912061211493187 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061211493187 {
+padding:0px;
+}
+#module_module_201912061211493187 {
+position:static;
+z-index:0;
+top:6830px;
+left:786px;
+width:100%;
+height: auto;
+}
+#module_module_201912061211493187 .ModuleHeadmodule_201912061211493187 {
+display:none;
+}
+#module_module_201912061211493187 .BodyCenter.BodyCentermodule_201912061211493187 {
+background-color:transparent;
+background-image:url(/comdata/77500/201806/201806220948163f5d0f.png);
+background-repeat:no-repeat;
+background-position:50% 50%;
+background-Attachment:scroll;
+}
+#module_module_201912061211493187 >.module_module_201912061211493187 {
+border-top-style:solid;
+border-top-color:rgb(255, 255, 255);
+border-top-width:6px;
+border-left-style:solid;
+border-left-color:rgb(255, 255, 255);
+border-left-width:6px;
+border-right-style:solid;
+border-right-color:rgb(255, 255, 255);
+border-right-width:6px;
+border-bottom-style:solid;
+border-bottom-color:rgb(255, 255, 255);
+border-bottom-width:6px;
+}
+#module_module_201912061211493187 >.module_module_201912061211493187{
+overflow: hidden;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-left-radius:10px;
+border-bottom-right-radius:10px;
+}
+@media screen and (min-width: 768px){
+#module_module_201912061211493187 .BodyCenter.BodyCentermodule_201912061211493187 {
+padding-top:0px;
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+}
+}
+@media screen and (max-width: 767px){
+#module_module_201912061211493187 .BodyCenter.BodyCentermodule_201912061211493187 {
+padding-top:0px;
+padding-left:0px;
+padding-right:0px;
+padding-bottom:0px;
+}
+}
+@media screen and (min-width: 768px){
+#module_module_201912061211493187 >.module_module_201912061211493187 {
+margin-top:0px;
+margin-left:0px;
+margin-right:0px;
+margin-bottom:0px;
+}
+}
+@media screen and (max-width: 767px){
+#module_module_201912061211493187 >.module_module_201912061211493187 {
+margin-top:0px;
+margin-left:0px;
+margin-right:0px;
+margin-bottom:0px;
+}
+}
+#module_module_201912061211493187 >.module_module_201912061211493187 {box-shadow: 0px 0px 0px 0px #ccc;transition: box-shadow 0.5s ease 0s;}
+#module_module_201912061211493187:hover {
+border:none;
+}
+#module_module_201912061211493187:hover >.module_module_201912061211493187 {
+border-color:#ccc;
+}
+#module_module_201912061211493187:hover >.module_module_201912061211493187 {box-shadow: 0px 0px 0px 0px #ccc;transition: box-shadow 0.5s ease 0s;}
+
+#module_module_201912061211493187 .mapContainer{height:352px;}
+#module_module_201912061211493187 .mapgiant-container .mapContainer{line-height: inherit;}
+</style>
+<div class="ModuleItem  StaticModule " wo="600" id="module_module_201912061211493187" CanEdit='1' IsDefaultStyle='' ModuleType='ModuleMapGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleMapGiant layout-558 layout-color- module_module_201912061211493187 clearfix">
+            <!-- 澶撮儴 -->
+         
+        <!-- 涓讳綋 -->
+    {foreach from=$moban_get_map(module_201912061211493187) item=item  name=item}
+	
+    <div class='BodyCenter BodyCentermodule_201912061211493187 clearfix'>
+	<div class="mapgiant-container">
+	
+    <div id="mapContainermodule_201912061211493187" class="mapContainer map_item" data-title="{$item.title}" data-lat="{$item.latitude}" data-long="{$item.longitude}"></div>
+    </div>
+
+<script type="text/javascript">
+    window['addQQMap'] = function (flag) {
+        if (window['addQQMapScriptArray'] && !flag){
+            window['addQQMapScriptArrayFlag'] = true
+            window['addQQMapScriptArray'].forEach(function(func) {
+                func(true)
+            })
+            window['addQQMapScriptArray'] = null
+            return
+        }  
+       addScript('/skinp/modules/ModuleMapGiant/ModuleMap.js', function () {
+               initMap('module_201912061211493187', "558", {
+                Latitude:'{$item.latitude}',
+                Longitude:'{$item.longitude}',
+                ItemTitle:'{$item.title}'
+               });
+           });
+   }
+   if (window['addQQMapScriptArrayFlag']) {
+       addQQMap()
+   } else {
+        window['addQQMapScriptArray'] = window['addQQMapScriptArray'] ? window['addQQMapScriptArray']: []
+        window['addQQMapScriptArray'].push(addQQMap)
+   }
+    addScript('https://map.qq.com/api/js?v=2.exp&callback=addQQMap&key=AXDBZ-MAXWQ-GQH5X-GBUQH-MDQBZ-26BC5', function() {
+
+    })
+</script>
+
+
+</div>
+</div>
+ {/foreach}
+
+
+</div>
+</div></div><style id="style_module_201912061211493187" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912061211493187{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061211493187{display:block}
+}
+</style>
+<div  class="module   " id="module_201912061211433783"     layout_htmid="295" layout_type="module" layout_data_type="0"  ><div id="body_module_201912061211433783"  class="body_module" layout_type="body"><style>/*鍥炬枃妯″潡 layout 103*/
+.ModuleImageTextGiant.layout-295 .imageTextGiant-Container{max-height: 100%; max-width: 100%;}
+
+@media only screen and (max-width: 767px) {
+	.ModuleImageTextGiant.layout-295 .imageTextGiant-Container .row{width:auto;}
+	.ModuleImageTextGiant.layout-295 .imageTextGiant-Container .row .col-xs-6{
+		width: 50%;
+    	/*padding: 10px 0 10px 10px;*/
+   		 box-sizing: border-box;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.ModuleImageTextGiant.layout-295 .imageTextGiant-Container .row{width:auto;}
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+	.ModuleImageTextGiant.layout-295 .imageTextGiant-Container .row{width:auto;}
+	.ModuleImageTextGiant.layout-295 .imageTextGiant-Container .row .col-xs-6{width: 49.66666%;/*padding: 15px 15px 0 15px;*/}
+	.ModuleImageTextGiant.layout-295 .normal_ImgtextBox_content .GraphicUpper{padding-bottom: 15px;}
+}
+/*鍏ㄥ眬閰嶇疆*/
+ 
+.ModuleImageTextGiant.layout-295 .row{display:flex; flex-wrap: wrap;justify-content: space-between;}
+ 
+
+/*鏁伴噺鎺у埗*/
+.ModuleImageTextGiant.layout-295 .imagetext_item {margin: 0 2% 2% 0 ; }
+@media screen and (max-width: 767px) {
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-2 {width: 49%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(2n).col-xs-2{ margin-right: 0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-3 {width:32%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(3n).col-xs-3{ margin-right: 0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-4 {width: 23.5%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(4n).col-xs-4{ margin-right: 0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-5 {width:18.4%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(5n).col-xs-5{ margin-right: 0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-6 {width:15%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(6n).col-xs-6{ margin-right: 0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item.col-xs-1 {width: 100%; padding-right:0;  padding-left:0;}
+    .ModuleImageTextGiant.layout-295   .imagetext_item:nth-child(n).col-xs-1{ margin-right: 0;}
+}
+@media screen and (min-width: 1200px){
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-2 {width: 49%; }
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(2n).col-lg-2{ margin-right: 0;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-3 {width:32%;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(3n).col-lg-3{ margin-right: 0;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-4 {width: 23.5%;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(4n).col-lg-4{ margin-right: 0;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-5 {width:18.4%;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(5n).col-lg-5{ margin-right: 0;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-6 {width:15%;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(6n).col-lg-6{ margin-right: 0;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item.col-lg-1 {width: 100%;}
+	.ModuleImageTextGiant.layout-295 .imagetext_item:nth-child(n).col-lg-1{ margin-right: 0;}
+}
+/*鏁伴噺鎺у埗*/
+
+
+.module_module_201912061211433783 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912061211433783 {
+padding:0px;
+}
+#module_module_201912061211433783 {
+}
+#module_module_201912061211433783 .ModuleHeadmodule_201912061211433783 {
+display:none;
+}
+
+
+#module_module_201912061211433783 .ModuleImageTextGiantContent{margin-top:18px;}
+#module_module_201912061211433783 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912061211433783 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912061211433783 .ModuleImageTextGiantContent{margin-right:0px;}
+#module_module_201912061211433783 .normal_ImgtextBox{margin-top:0px;}
+#module_module_201912061211433783 .normal_ImgtextBox{margin-bottom:0px;}
+#module_module_201912061211433783 .normal_ImgtextBox{margin-left:0px;}
+#module_module_201912061211433783 .normal_ImgtextBox{margin-right:0px;}
+</style>
+<div class="ModuleItem  "  id="module_module_201912061211433783" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleImageTextGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleImageTextGiant layout-295 layout-color-orange module_module_201912061211433783 clearfix">
+            <!-- 澶撮儴 -->
+         
+        <!-- 涓讳綋 -->
+    <div class='BodyCenter BodyCentermodule_201912061211433783 clearfix'><div class="imageTextGiant-Container imageTextContainer clearfix" hasresponsive="1" autohide="0" hideheight="150" hidewidth="760" >
+
+	<div class="row">
+	{foreach from=$moban_get_module_data_list(module_201912061211433783) item=item  name=item}
+				<div class=" normal_ImgtextBox imagetext_item col-xs-2 col-lg-3">
+			<div class=" GraphicUpper ">
+				<a href="javascript:;" style="cursor: default"><img class="TextImage image-animation imagetext_item_images" src="{$item.thumb}" width="{$item.width}"  width="{$item.height}" title="" alt="">
+				</a>
+			</div>
+			<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+				{$item.content}
+			</div>
+		</div>
+ {/foreach} 
+
+
+				
+			</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912061211433783" type="text/css">
+#module_201912061211433783  {background-position:no-repeat;}
+#module_201912061211433783  {background-attachment:scroll;}
+#module_201912061211433783:hover  {background-position:no-repeat;}
+#module_201912061211433783:hover  {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item .imagetext_item_images {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item .imagetext_item_images {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item .imagetext_item_text {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item .imagetext_item_text {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item:hover {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item:hover {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_images {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_images {background-attachment:scroll;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_text {background-position:no-repeat;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_text {background-attachment:scroll;}
+#module_201912061211433783  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783:hover  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item:hover {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912061211433783  .imagetext_item:hover .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+@media screen and (min-width: 768px){
+#module_201912061211433783  {padding-top:20px;}
+#module_201912061211433783  {border-type:none;}
+#module_201912061211433783:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+#module_201912061211433783  {padding-top:10px;}
+}
+@media screen and (min-width: 768px){
+#body_module_201912061211433783{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912061211433783{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+</div>
+</div>
+{include file="footer.shtml"} {insert name="kefu" } <script src="/skinp/share/wow.min.js"></script> <script>new WOW().init();</script>{$stats_code}</body></html>

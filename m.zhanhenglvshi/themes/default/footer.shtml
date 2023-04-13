@@ -1,0 +1,126 @@
+<div id="footercontainer" layout_type="zone" class="footercontainer lyrow">
+<div id="footerzonecontainer" layout_type="zonecontainer" class="footerzonecontainer">
+<div  layout_type="container" id="container_201912131058538754">
+<style id="style_container_201912131058538754" type="text/css">
+#container_201912131058538754  {background-color:#666666;}
+#container_201912131058538754  {background-position:no-repeat;}
+#container_201912131058538754  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912131058538754  {padding-top:20px;}
+#container_201912131058538754  {padding-bottom:20px;}
+#container_201912131058538754  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912131058538754  {background-position:no-repeat;}
+#container_201912131058538754  {background-attachment:scroll;}
+#container_201912131058538754  {padding-top:20px;}
+#container_201912131058538754  {padding-bottom:20px;}
+#container_201912131058538754  {padding-left:10px;}
+#container_201912131058538754  {padding-right:10px;}
+}
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019121310585399930" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout" layout_type="dom" id="dom_2019121310585399930">
+<div  class="module   " id="module_201912131059147373"     layout_htmid="31" layout_type="module" layout_data_type="0"  ><div id="body_module_201912131059147373"  class="body_module" layout_type="body"><style>
+.ModuleImageTextGiant.layout-31 .imageTextGiant-Container{height: auto; word-wrap: break-word;max-height: 100%;padding:0px;max-width: 100%; overflow: hidden;}.module_module_201912131059147373 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912131059147373 {
+padding:0px;
+}
+#module_module_201912131059147373 {
+position:static;
+z-index:0;
+top:0px;
+width:100%;
+height: auto;
+}
+#module_module_201912131059147373 .ModuleHeadmodule_201912131059147373 {
+display:none;
+}
+
+#module_module_201912131059147373 .ModuleImageTextGiantContent{margin-top:0px;}
+#module_module_201912131059147373 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912131059147373 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912131059147373 .ModuleImageTextGiantContent{margin-right:0px;}
+
+#module_module_201912131059147373 .imageTextGiant-Container{padding-left:0px;}
+#module_module_201912131059147373 .imageTextGiant-Container{padding-right:0px;}
+</style>
+
+
+<div class="ModuleItem  StaticModule " wo="1592" id="module_module_201912131059147373" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleImageTextGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleImageTextGiant layout-31 layout-color-red module_module_201912131059147373 clearfix">
+            <!-- 头部 -->
+         
+        <!-- 主体 -->
+ <div class='BodyCenter BodyCentermodule_201912131059147373 clearfix'>
+ <div class="imageTextGiant-Container imageTextContainer clearfix imagetext_item" hasresponsive="1" autohide="0" hideheight="150" hidewidth="760" >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+	{foreach from=$moban_get_module_data_list(module_201912131059147373) item=item  name=item}
+	 {$item.content}
+	 {/foreach}   
+	</div>
+</div>
+<script>
+	//changeFontSize($('#module_module_201912131059147373'));
+	</script></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912131059147373" type="text/css">
+#module_201912131059147373  {background-position:no-repeat;}
+#module_201912131059147373  {background-attachment:scroll;}
+#module_201912131059147373:hover  {background-position:no-repeat;}
+#module_201912131059147373:hover  {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item .imagetext_item_title {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item .imagetext_item_title {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item .imagetext_item_images {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item .imagetext_item_images {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item .imagetext_item_text {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item .imagetext_item_text {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item .imagetext_item_button {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item .imagetext_item_button {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item:hover {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item:hover {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_title {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_title {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_images {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_images {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_text {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_text {background-attachment:scroll;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_button {background-position:no-repeat;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_button {background-attachment:scroll;}
+#module_201912131059147373  {box-shadow: px px px px   ;}
+#module_201912131059147373:hover  {box-shadow: px px px px   ;}
+#module_201912131059147373  .imagetext_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item .imagetext_item_title {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item .imagetext_item_button {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item:hover {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_title {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_images {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_text {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item:hover .imagetext_item_button {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912131059147373  .imagetext_item .imagetext_item_text {color:rgba(255, 255, 255, 1);}
+@media screen and (min-width: 768px){
+#module_201912131059147373  {border-type:none;}
+#module_201912131059147373:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912131059147373{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912131059147373{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+</div>
+</div>

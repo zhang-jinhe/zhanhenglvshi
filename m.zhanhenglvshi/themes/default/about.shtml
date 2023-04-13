@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="page-type" cid=""   aid=""  content="about"  />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<script type="text/javascript" src="/skinp/js/PageJs.js"></script>
+<script src="/skinp/common/js/layer/layer.js" /></script><!--<edit_include_js_css>-->
+<link rel="stylesheet" href="/scripts/swiper.animate/animate.min.css"  type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/ModuleMobileNavTpl.css" type="text/css"/>
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="/scripts/swiper2/css/idangerous.swiper.css">
+<script type="text/javascript" src="/scripts/swiper2/js/idangerous.swiper.min.js"></script>
+<![endif]-->
+<!--[if gt IE 9]>
+<link rel="stylesheet" type="text/css" href="/scripts/Swiper-3.4.0/css/swiper.min.css"/>
+<script type="text/javascript" src="/scripts/Swiper-3.4.0/js/swiper.min.js"></script>
+<![endif]-->
+<!--[if !IE]>
+<!-->
+<link rel="stylesheet" type="text/css" href="/scripts/Swiper-3.4.0/css/swiper.min.css"/>
+<script type="text/javascript" src="/scripts/Swiper-3.4.0/js/swiper.min.js"></script>
+<!--<![endif]--><script type="text/javascript" src="/scripts/swiper.animate/swiper.animate1.0.2.min.js"></script>
+<link rel="stylesheet" href="/skinp/css/ModuleStyleMobile.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/fontawesome/css/font-awesome.min.css" type="text/css"/>
+<link rel="stylesheet" href="/scripts/iconfont/iconfont.css" type="text/css"/>
+<link rel="stylesheet" href="/skinp/css/jquery-ui.min.css" type="text/css"/>
+</head><body id="about" ><!--<edit_header>-->
+{include file="header.shtml"}<div id="contentcontainer" layout_type="zone" class="contentcontainer lyrow">
+<div id="contentzonecontainer" layout_type="zonecontainer" class="contentzonecontainer">
+<div  layout_type="container" id="container_201912131107135070">
+<style id="style_container_201912131107135070" type="text/css">
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019121311071358750" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout"   layout_type="dom" id="dom_2019121311071358750">
+<div  class="module   " id="module_201912131116495266"     layout_htmid="652" layout_type="module" layout_data_type="0"  ><div id="body_module_201912131116495266"  class="body_module" layout_type="body"><style>
+/*轮播图样式*/
+
+/*切换按钮样式*/
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-container{ position: relative;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev{ position: absolute; width: 81px; height: 82px; background: rgba(0,0,0,0.2);top:50%;z-index: 9999;
+    transform : translate(0,-50%);
+    -webkit-transform:translate(0,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(0,-50%);       /* for Firefox */
+    -ms-transform:translate(0,-50%);       /* for IE */
+    -o-transform: translate(0,-50%);        /* for Opera */
+    transition: all .3s
+}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next:hover,.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:hover{background: rgba(0,0,0,0.4);}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next{left: 0; cursor: pointer;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev{right: 0;cursor: pointer;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next:before{ content: ""; position: absolute;
+    top:50%; left: 50%; width: 17px; height:30px; background: #fff;
+    transform : translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:translate(-50%,-50%);       /* for IE */
+    -o-transform: translate(-50%,-50%);
+    background: url("/images/pres.png") no-repeat center;
+    background-size: 100%;
+}
+
+
+.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:before{ content: ""; position: absolute;
+    top:50%; left: 50%; width: 17px; height:30px; background: #fff;
+    transform : translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);    /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:translate(-50%,-50%);       /* for IE */
+    -o-transform: translate(-50%,-50%);
+    background: url("/images/nexts.png") no-repeat center;
+    background-size: 100%;
+}
+/*.ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-prev:after{ content: ""; position: absolute;*/
+    /*top:44%; right: 652%; width: 2px; height:20px; background: #fff;*/
+    /*-webkit-transform: rotate(-135deg);   !* for Chrome || Safari *!*/
+    /*-moz-transform:  rotate(-135deg);       !* for Firefox *!*/
+    /*-ms-transform:   rotate(-135deg);        !* for IE *!*/
+    /*-o-transform:   rotate(-135deg);       !* for Opera *!*/
+    /*transform: rotate(-135deg);*/
+/*}*/
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet{width: 16px;  height: 16px; border-radius: 8px;border: 0;  background: rgba(0, 0, 0, 0); position: relative; opacity: 1;}
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet:before{ content: ""; width: 8px; height: 8px; background: #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);   /* for Chrome || Safari */
+    -moz-transform: translate(-50%,-50%);       /* for Firefox */
+    -ms-transform:  translate(-50%,-50%);        /* for IE */
+    -o-transform:  translate(-50%,-50%);
+}
+.ModuleSlideGiant.layout-652 .slidegiant-container .slideshow-1 .swiper-pagination .swiper-pagination-bullet-active{background: rgba(0, 0, 0, 0.21); }
+/*.forie .swiper-container {height: 600px;}*/
+.forie .swiper-pagination {  position: absolute;  left: 0;  text-align: center;  bottom:5px;  width: 100%;  }
+.forie .swiper-pagination-switch{display: inline-block;width: 16px;  height: 16px; border-radius: 8px;border: 0;  background: rgba(0, 0, 0, 0); position: relative; opacity: 1; margin: 0 5px;}
+.forie .swiper-pagination-switch:before{ content: ""; width: 8px; height: 8px; background: #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%;    transform: translate(-50%,-50%);webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%);  -ms-transform: translate(-50%,-50%);  -o-transform: translate(-50%,-50%);}
+.forie .swiper-active-switch{background: rgba(0, 0, 0, 0.21); }
+@media only screen and (max-width: 480px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ModuleSlideGiant.layout-652 .slidegiant-container .swiper-slideshow-1-next,.swiper-slideshow-1-prev{display: none}
+}
+.module_module_201912131116495266 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912131116495266 {
+padding:0px;
+}
+#module_module_201912131116495266 {
+}
+#module_module_201912131116495266 .ModuleHeadmodule_201912131116495266 {
+display:none;
+}
+
+</style><div class="ModuleItem  "  id="module_module_201912131116495266" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleSlideGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleSlideGiant layout-652 layout-color- module_module_201912131116495266 clearfix">
+            <!-- 头部 -->
+        
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCentermodule_201912131116495266 clearfix'><div class="slidegiant-container" >
+    <div class="swiper-container slideshow-1" >
+        <div class="swiper-wrapper">
+		{foreach from=$moban_get_module_data_list(module_201912131116495266) item=item  name=item}
+                        <div class="swiper-slide"> <a href="{$item.url} "><img src="{$item.thumb} " alt="" title="" class="img-responsive"></a></div>
+						{/foreach}
+                    </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+      
+    </div>
+    <script>
+        //            var swiper = new Swiper('#module_module_201912131116495266 .swiper-container', {
+        //                pagination: '.swiper-pagination',
+        //                nextButton: '.swiper-slideshow-1-prev ',
+        //                prevButton: '.swiper-slideshow-1-next',
+        //                slidesPerView: 1,
+        //                paginationClickable: true,
+        //                speed:1000,
+        ////                spaceBetween: 10,
+        //                autoplay:2 * 1000
+        //
+        //        });
+    (function (){
+        var swiper;    
+        var initSwiperFunc = function () {
+            if(swiper)swiper.destroy(true, true);
+            function swipertwolayout104(ModuleID) {
+                $('#module_'+ModuleID+" .slidegiant-container").addClass("fornotie")
+                swiper = new Swiper('#module_'+ModuleID+' .swiper-container', {
+                    pagination: '#module_'+ModuleID+' .swiper-pagination',
+                    nextButton: '#module_'+ModuleID+' .swiper-slideshow-1-prev ',
+                    prevButton: '#module_'+ModuleID+' .swiper-slideshow-1-next',
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    autoplayDisableOnInteraction:false,
+                    speed:2 * 1000,
+                    autoplay:2 * 1000,
+                    loop : true,
+                    loopAdditionalSlides : 2
+
+            });
+            }
+            $(document).ready(function () {
+                var DEFAULT_VERSION = 9;
+                var ua = navigator.userAgent.toLowerCase();
+                var isIE = ua.indexOf("msie") > -1;
+                var safariVersion;
+                if (isIE) {
+                    safariVersion = ua.match(/msie ([\d.]+)/)[1];
+                    var sa = parseInt(safariVersion);
+                    if (safariVersion <= DEFAULT_VERSION) {
+                        //ie9以下，调用swiper2
+                        $("#module_module_201912131116495266 .slidegiant-container").addClass("forie")
+                        swiper = new Swiper('#module_module_201912131116495266 .swiper-container', {
+
+                            loop: true,//可选选项，开启循环
+                            speed: 2 * 1000,
+                            autoplayDisableOnInteraction: false,
+                            keyboardControl: true,//键盘滚动
+                            calculateHeight: true,//自动高度
+                            pagination: '#module_module_201912131116495266 .swiper-pagination',
+                            paginationClickable: true,//点击分页器的指示点时会发生Swiper。
+                            autoplay: 2 * 1000,//可选选项，自动滑动
+//                            onSlideChangeStart: function(){ setHeight() },
+//                            onSwiperCreated: function(){ setHeight() }
+
+                    });
+
+                        $('#module_module_201912131116495266 .swiper-slideshow-1-next').on('click', function(e){
+                            e.preventDefault()
+                            swiper.swipePrev()
+                        })
+                        $('#module_module_201912131116495266 .swiper-slideshow-1-prev').on('click', function(e){
+                            e.preventDefault()
+                            swiper.swipeNext()
+                        })
+                        $(window).resize(function () {
+                            swiper.reInit();
+                        });
+                        $('#module_module_201912131116495266 .forie .swiper-container').height( $(mySwiper.activeSlide()).find("img").height() );
+
+                    } else {
+                        //ie9以上，调用swiper3
+                        swipertwolayout104('module_201912131116495266')
+                    }
+                } else {
+                    //非ie
+                    swipertwolayout104('module_201912131116495266')
+                }
+            });
+        }
+        if($('#module_module_201912131116495266' + ' .slidegiant-container').is(':visible')){
+            initSwiperFunc()
+        }
+        window["initSwiperFuncmodule_201912131116495266"] = function()
+        {
+            initSwiperFunc()
+        }
+    })()    
+    </script>
+</div></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912131116495266" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912131116495266{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912131116495266{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+<div  layout_type="container" id="container_201912131117118132">
+<style id="style_container_201912131117118132" type="text/css">
+#container_201912131117118132  {background-position:no-repeat;}
+#container_201912131117118132  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912131117118132  {padding-top:20px;}
+#container_201912131117118132  {padding-bottom:20px;}
+#container_201912131117118132  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912131117118132  {background-position:no-repeat;}
+#container_201912131117118132  {background-attachment:scroll;}
+#container_201912131117118132  {padding-top:20px;}
+#container_201912131117118132  {padding-bottom:20px;}
+#container_201912131117118132  {padding-left:10px;}
+#container_201912131117118132  {padding-right:10px;}
+}
+</style>
+<div class="row clearfix  container" layout_type="domcontainer">
+<style id="style_dom_2019121311171172760" type="text/css">
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12  column dom_layout"   layout_type="dom" id="dom_2019121311171172760">
+<div  class="module   " id="module_201912131117158935"     layout_htmid="31" layout_type="module" layout_data_type="0"  ><div id="body_module_201912131117158935"  class="body_module" layout_type="body"><style>
+.ModuleImageTextGiant.layout-31 .imageTextGiant-Container{height: auto; word-wrap: break-word;max-height: 100%;padding:0px;max-width: 100%; overflow: hidden;}.module_module_201912131117158935 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912131117158935 {
+padding:0px;
+}
+#module_module_201912131117158935 {
+position:static;
+z-index:0;
+top:0px;
+width:100%;
+height: auto;
+}
+#module_module_201912131117158935 .ModuleHeadmodule_201912131117158935 {
+display:none;
+}
+
+#module_module_201912131117158935 .ModuleImageTextGiantContent{margin-top:0px;}
+#module_module_201912131117158935 .ModuleImageTextGiantContent{margin-bottom:0px;}
+#module_module_201912131117158935 .ModuleImageTextGiantContent{margin-left:0px;}
+#module_module_201912131117158935 .ModuleImageTextGiantContent{margin-right:0px;}
+
+#module_module_201912131117158935 .imageTextGiant-Container{padding-left:0px;}
+#module_module_201912131117158935 .imageTextGiant-Container{padding-right:0px;}
+</style>
+
+
+<div class="ModuleItem  StaticModule " wo="1592" id="module_module_201912131117158935" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleImageTextGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleImageTextGiant layout-31 layout-color-red module_module_201912131117158935 clearfix">
+            <!-- 澶撮儴 -->
+         
+        <!-- 涓讳綋 -->
+ <div class='BodyCenter BodyCentermodule_201912131117158935 clearfix'>
+ <div class="imageTextGiant-Container imageTextContainer clearfix imagetext_item" hasresponsive="1" autohide="0" hideheight="150" hidewidth="760" >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent imagetext_item_text">
+	{foreach from=$moban_get_module_data_list(module_201912131117158935) item=item  name=item}
+	 {$item.content}
+	 {/foreach}   
+	</div>
+</div>
+<script>
+	//changeFontSize($('#module_module_201912131117158935'));
+	</script></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912131117158935" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912131117158935{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912131117158935{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+</div>
+</div>
+{include file="footer.shtml"} {insert name="kefu" } <script src="/skinp/share/wow.min.js"></script> <script>new WOW().init();</script>{$stats_code}</body></html>

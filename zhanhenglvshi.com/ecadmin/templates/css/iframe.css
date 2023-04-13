@@ -1,0 +1,51 @@
+
+/* 定义浮动*/
+.fl {float: left;display: inline  }
+.fr {float: right;display: inline  }
+.clear {clear: both;height: 0px;line-height: 0px;font-size: 0px;}
+.clearfix:after, .clearfix:before {content:"";display:table  }
+.clearfix:after {clear:both}
+.clearfix {zoom:1}
+/*滚动条样式*/
+.mCustomScrollBox .mCSB_container{margin:0;}
+.mCustomScrollBox>.mCSB_scrollTools{z-index: 950;width: 10px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width: 6px;background: rgba(102,102,102,0.5);filter: "alpha(opacity=50)";-ms-filter: "alpha(opacity=50)";}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger.active .mCSB_dragger_bar{background: rgba(102,102,102,0.9);filter: "alpha(opacity=90)";-ms-filter: "alpha(opacity=90)";}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background: rgba(102,102,102,0.9);filter: "alpha(opacity=90)";-ms-filter: "alpha(opacity=90)";}
+.mCSB_scrollTools .mCSB_draggerRail{background: none;}
+/*滚动条 end*/
+/*顶部导航*/
+.nav_right p:nth-child(1) i{}
+/*导航 START*/
+.wxzHeader{background:#ffffff;border-bottom:none;box-shadow: 0 0 15px rgba(0,0,0,0.2);}
+.wxzHeader .goHome a {color:#fff;}
+.wxzHeader .goHome a:hover{background-color:#ff6700;}
+.wxzSwitch {position: relative;display:none;width: 160px;margin:0 auto;}
+.wxzSwitch ul{margin:0;padding:0;}
+.wxzSwitch li{float:left;display:inline;}
+.wxzSwitch li a{display:block;width:40px;height:55px;line-height: 55px;overflow: hidden;}
+.wxzSwitch .mobileIco{    background-position: 4px -291px;  width: 40px;  height: 35px;  margin-top: 9px;}
+.wxzSwitch .htabletIco{background-position: 4px -352px;  width: 40px;  height: 28px;  margin-top: 9px;}
+.wxzSwitch .tabletIco{background-position: 4px -260px;  width: 40px;  height: 37px;margin-top: 8px;}
+.wxzSwitch .qrcodeIco{    background-position: 8px -1217px;height: 40px;width: 35px;}
+.wxzSwitch .desktopIco{background-position: 4px -322px;  width: 40px;  height: 29px;margin-top: 9px;}
+.wxzSwitch .mobileIco.disable{background-position:-91px -121px;}
+.wxzSwitch .htabletIco.disable{background-position:-169px -121px;}
+.wxzSwitch .tabletIco.disable{background-position:-42px -121px;}
+.wxzSwitch .qrcodeIco.disable{background-position:-42px -121px;}
+.wxzSwitch .desktopIco.disable{background-position:-42px -121px;}
+.wxzSwitch .mobileIco:hover,.wxzSwitch .mobileIco.active{background-position: -38px -291px;}
+.wxzSwitch .htabletIco:hover,.wxzSwitch .htabletIco.active{background-position:-38px  -352px;}
+.wxzSwitch .tabletIco:hover,.wxzSwitch .tabletIco.active{background-position: -38px -260px;}
+.wxzSwitch .qrcodeIco:hover,.wxzSwitch .qrcodeIco.active{background-position: -35px -1217px;}
+.wxzSwitch .desktopIco:hover,.wxzSwitch .desktopIco.active{background-position:-38px -322px;}
+.icon{ background: url("../images/iconimg.png")no-repeat; display: block;z-index: 10;}
+.nav_right>ul>li{height: 40px;border-left:1px solid #444444;line-height: 35px;padding:0 14px;color:#fff; position: relative;}
+.nav_right>ul>li i{ position: relative; top:10px; right: 5px;display: inline-block;}
+.nav_pt{ position: relative;}
+body,iframe {width: 100%;height: 100%;background:#fff;}
+.previewCont {margin: 55px auto 0 auto; margin: 0px; padding-top: 55px;width: 100%;}
+.designBox {width: 100%;text-align: center;}
+.designBox .left_con { margin: 0 auto;}
+
+   

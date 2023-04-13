@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>栏目信息</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" charset="utf-8" src="My97DatePicker/WdatePicker.js"> </script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+<style>
+	.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.add_order_table{background:#fff;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+	float:left;
+	margin-top: 13px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+.client-div-select {margin-right:5px;}
+</style>
+</head>
+
+<body>
+	<div class="body_hei"></div>
+	<div class="body">
+		<div class="ur_here">当前位置 &gt; {$ur_here} - <a href="article.php?act=list">返回栏目列表</a></div>
+		
+		<form enctype="multipart/form-data" action="" method="post" name="theForm"  id="theForm" >
+
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody style="width:100%">
+			
+			<tr style="width:100%;">
+				<td width="30%" align="right">栏目名称：</td>
+				<td>
+					<input  name="cat_name" value="{$cat.cat_name}" placeholder="请填{$ope.default_lang}栏目名称"  required="true">
+					
+					{if $ope.open_lang}
+					<input  name="cat_name{$select_lang}" value="<?php echo $GLOBALS[smarty]->_var[cat]['cat_name'.$GLOBALS[smarty]->_var[ope]['select_lang']];?>" placeholder="请填{$langc.$select_lang}栏目名称" required="true">
+					{/if}
+
+				
+				</td>
+			</tr>
+			  <tr >
+				<td width="30%" align="right">栏目：</td>
+				<td>
+				   <select name="parent_id"  id="mobanlist" onchange="add_main(this.value);" >
+                     <option value="0">顶级栏目</option>
+					{foreach from=$articlecat item=cat}
+					<option value="{$cat.cat_id}"  urlid="{$cat.cat_id}" moban="{$cat.moban}"  smallmoban="{$cat.smallmoban}"    {if $parent_id eq $cat.cat_id}selected="ture"{/if} >{if $cat.level eq 1}&nbsp;&nbsp;{/if}{if $cat.level eq 2}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if}{if $cat.level eq 3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if} {$cat.cat_name}</option>
+					{/foreach}
+				  </select>
+				 </td>
+			  </tr>
+
+		  <tr >
+				<td width="30%" align="right">跳转：</td>
+				<td>
+				   <input  name="jump_url" value="{$cat.jump_url}" placeholder="请填{$ope.default_lang}跳转链接"  >
+				 </td>
+			  </tr>
+
+
+  <tr>
+				<td width="30%" align="right">定义URL：</td>
+				<td><input type="text" name="define_url" value="{$cat.define_url}" size="30"  />
+             <span class="notice-span" >只能输入数字、字母 以及 _ ，除此之外不能输入其他字符，尤其是不能输入 中划线 -</span>
+			<input type="hidden" name="old_define_url" value="{$cat.define_url}" /></td>
+			  </tr>
+
+
+
+			<tr>
+				<td width="30%" align="right">是否显示：</td>
+				<td>
+				<input type="radio" name="is_show" value="1" {if $cat.is_show eq 1}checked{/if}>是
+			  <input type="radio" name="is_show" value="0" {if $cat.is_show eq 0}checked{/if}> 否</td>
+            </tr>
+
+
+			<tr>
+				<td width="30%" align="right">导航显示：</td>
+				<td>
+				<input type="radio" name="is_nav_show" value="1" {if $cat.is_nav_show eq 1}checked{/if}>是
+			  <input type="radio" name="is_nav_show" value="0" {if $cat.is_nav_show eq 0}checked{/if}> 否</td>
+            </tr>
+
+
+
+
+
+
+			   {if $ope.cat_thumb}
+<tr>
+				<td width="30%" align="right">栏目缩略图：</td>
+				<td><input type="file" name="cat_thumb" id="cat_thumb" size="45"  style="display:inline">
+{if $cat.cat_thumb}<img src="../{$cat.cat_thumb}" width=50 height=50 />{/if}
+
+ <font color="red">尺寸{$size.article_cat_w}px*{$size.article_cat_h}px,大小控制2M内,图片文件名用拼音数字组成，不要用中文,图片类型jpg</font>
+				</td>
+			  </tr>
+			  {/if}
+
+
+			   {if $ope.is_page_size}
+<tr>
+				<td width="30%" align="right">分页记录：</td>
+				<td><input  name="page_size" value="{$cat.page_size}" placeholder="10"  required="true">
+				</td>
+			  </tr>
+			  {/if}
+
+
+
+               <tr>
+				<td width="30%" align="right">标题[T]：</td>
+				<td>
+				<input type="text" name="title" maxlength="60" value="{$cat.title}"  placeholder="请填{$ope.default_lang}标题" />
+
+				{if $ope.open_lang}
+				<input type="text" name="title{$select_lang}" maxlength="60" value="<?php echo $GLOBALS[smarty]->_var[cat]['title'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>"  placeholder="请填{$langc.$select_lang}标题" />
+				{/if}
+			
+
+				</td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">关键字[D]：</td>
+				<td>
+				<input type="text" name="keywords" maxlength="60"    value="{$cat.keywords}"  placeholder="请填{$ope.default_lang}关键字"  />
+
+				{if $ope.open_lang}
+				<input type="text" name="keywords{$select_lang}" maxlength="60"    value="<?php echo $GLOBALS[smarty]->_var[cat]['keywords'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>"  placeholder="请填{$langc.$select_lang}关键字"  />
+				{/if}
+				
+				</td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">网页描述[K]：</td>
+				<td>
+				<textarea name="description" id="description" cols="40" rows="1"  placeholder="请填{$ope.default_lang}网页描述"  >{$cat.description}</textarea>
+				{if $ope.open_lang}<textarea name="description{$select_lang}" id="description{$select_lang}" cols="40" rows="1"  placeholder="请填{$langc.$select_lang}网页描述">
+				<?php echo $GLOBALS[smarty]->_var[cat]['description'.$GLOBALS[smarty]->_var[ope]['select_lang']] ;?></textarea>{/if}
+
+				</td>
+			  </tr>
+
+
+			  <tr>
+				<td width="30%" align="right">栏目页模板：</td>
+				<td><input type="text" name="moban" id="moban" maxlength="60" value="{$cat.moban}" /></td>
+			  </tr>
+
+			  <tr>
+				<td width="30%" align="right">内容页模板：</td>
+				<td><input type="text" name="smallmoban" id="smallmoban"   maxlength="60" value="{$cat.smallmoban}" /></td>
+			  </tr>
+
+
+			  <tr style="width:100;height:10px;"></tr>
+			
+			</tbody>
+		</table>
+		
+		
+
+
+		
+		
+		<div class="floor_operation a_center">
+		  <input type="hidden" name="id" value="{$cat.cat_id}" />
+          <input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+          <input type="reset" value="{$lang.button_reset}" class="input_button" />
+		  <input type="hidden" name="old_cat_name" value="{$cat.cat_name}" />
+        </div>
+        <input type="hidden" name="act" value="{$form_action}" />
+		</div>
+		</form>
+	</div>
+
+<script type="Text/Javascript" language="JavaScript">
+
+
+
+function add_main(key)
+{
+ $("#moban").val(Trim($("#mobanlist").find("option:selected").attr("moban")));
+  $("#smallmoban").val(Trim($("#mobanlist").find("option:selected").attr("smallmoban")));   
+}
+function Trim(str) { return str.replace(/(^\s*)|(\s*$)/g, ""); }
+
+
+
+</script>
+
+
+
+</body></html>

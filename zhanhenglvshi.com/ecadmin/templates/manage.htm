@@ -1,0 +1,76 @@
+{include file="pageheader.htm"}
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+.system-message{ padding: 24px 48px; }
+.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+.system-message .jump{ padding-top: 10px}
+.system-message .jump a{ color: #333;}
+.system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }
+.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
+</style>
+
+<div class="system-message">
+<h1>^_^</h1>
+<p class="error">{$msg_detail}</p>
+<p class="detail"></p>
+<p class="jump">
+{if $auto_redirect}{$lang.auto_redirection}{/if}
+</p>
+</div>
+
+<tr>
+        <td></td>
+        <td>
+          <ul style="margin:0; padding:0 10px" class="msg-link">
+            {foreach from=$links item=link}
+            <li><a href="{$link.href}" {if $link.target}target="{$link.target}"{/if}>{$link.text}</a></li>
+            {/foreach}
+          </ul>
+
+        </td>
+      </tr>
+    </table>
+
+
+
+
+{if $auto_redirect}
+<script language="JavaScript">
+<!--
+//var seconds = 3;
+var defaultUrl = "{$default_url}";
+
+{literal}
+onload = function()
+{
+  if (defaultUrl == 'javascript:history.go(-1)' && window.history.length == 0)
+  {
+    document.getElementById('redirectionMsg').innerHTML = '';
+    return;
+  }
+
+  window.setInterval(redirection, 1000);
+}
+function redirection()
+{
+  if (seconds <= 0)
+  {
+    window.clearInterval();
+    return;
+  }
+
+  seconds --;
+  document.getElementById('spanSeconds').innerHTML = seconds;
+
+  if (seconds == 0)
+  {
+    window.clearInterval();
+    location.href = defaultUrl;
+  }
+}
+//-->
+</script>
+{/literal}
+{/if}
+{include file="pagefooter.htm"}

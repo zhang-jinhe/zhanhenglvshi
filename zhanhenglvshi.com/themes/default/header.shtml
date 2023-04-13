@@ -1,0 +1,522 @@
+<style>
+#module_201912061108289356 .form_item .form_item_desc{background-color: rgba(255, 255, 255, 0.85);}
+#module_module_201912061042094294 .pro-img {overflow: hidden;}
+#module_201912061042094294 .product_item {transition: transform .3s linear;    overflow: hidden;}
+#module_201912061042094294 .product_item:hover img {transform:scale(1.1) !important;transition: transform .3s linear; }
+#module_module_201912060922262622 .content {    padding-top: 10% !important}
+#module_module_201912060922262622 .content a:hover{color:#000 !important;}
+
+</style>
+
+
+<article class="ModuleMobileNavGiant layout-{#module_layoutid} mobileNav-16139359" id="module_16139359">
+      <section class="containers">
+        <section id="MobileNav" class="mobileNav mobileNav_1 black">
+          <header id="header">
+            <a href="javascript:;" class="mm-hbtn">
+              <div class="lcbody" onclick="showMobileNavFloatLayer(this)">
+                <div class="lcitem top">
+                  <div class="rect top">
+                  </div>
+                </div>
+                <div class="lcitem bottom">
+                  <div class="rect bottom">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <p>{$cfg.web_name}</p>
+          </header>
+        </section>
+        <div class="header-model">
+        </div>
+        <section id="MobileNavFloatLayer" class="mobileNavFloatLayer mobileNavFloatLayer_1 black itemType0">
+          <nav class="micro-nav-item">
+            <ul id="accordion">
+              <li class="clearfix border1px">
+                <a href="" class="link " target="_self">
+                  <i class="about-us fl" style="background: none"></i>
+                  <p class="fl maxlarge">{$lang.home}</p>
+                </a>
+              </li>
+			  {foreach name=nav from=$moban_get_navigator_list() item=nav key=key }
+ 
+              <li class="clearfix border1px">
+                <a href="{$nav.url}" class="link " target="_self">
+                  <i class="about-us fl" style="background: none"></i>
+                  <p class="fl maxlarge">{$nav.cat_name}</p><span class="more fr iconfont icon-jia"></span>
+                </a>
+                <ul class="clearfix subnav navul" style="display: none;">
+				                  {foreach name=snav from=$nav.catlist item=snav  }
+
+                  <li class="borderTop1px">
+                    <a href="{$snav.url}" class="link " target="_self">
+                      <p class="fl maxmiddle">{$snav.cat_name}</p>
+                    </a>
+                  </li>
+    	            
+                     {/foreach}
+                </ul>
+              </li>
+              {/foreach}
+            </ul>
+          </nav>
+        </section>
+      </section>
+      <script>var dom = "#module_"+"16139359"+" #MobileNavFloatLayer";
+     var ScrollFix = function(elem) {
+         var u = navigator.userAgent;
+         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+         var startY, startTopScroll;
+         elem.addEventListener('touchstart', function(event){
+             if(isiOS){if(!$('body').hasClass('bodyabstre')) $('body').addClass('bodyabstre');}
+             else{if(!$('body').hasClass('bodyfixd')) $('body').addClass('bodyfixd');}
+             startY = event.touches[0].pageY;
+             startTopScroll = elem.scrollTop;
+             //当滚动条在最顶部的时候
+             if(startTopScroll<= 0)
+                 elem.scrollTop = 1;
+             //当滚动条在最底部的时候
+             if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+                 elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+         }, false);
+     };
+    ScrollFix($(dom).get(0));
+     function onViewChange() {
+         $('body').removeClass('bodyabstre').removeClass('bodyabstre');
+         container.classList.toggle('view-change');
+     }
+
+    var container = document.querySelector('.containers');
+    var bumen = document.querySelector('.lcbody');
+    bumen.addEventListener('click', onViewChange);
+
+     $(function() {
+         var Accordion = function(el, multiple) {
+             this.el = el || {};
+             this.multiple = multiple || false;
+             var links = this.el.find('.more');
+             links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+         }
+
+         Accordion.prototype.dropdown = function(e) {
+             var $el = e.data.el,
+             $this = $(this),
+             $next = $this.parent().next();
+             $next.slideToggle();
+             $this.closest('li').toggleClass('open');
+             $this.parent().parent().siblings().find('.navul').slideUp().parent().removeClass('open');
+             $this.parent().siblings('ul').find('.navul').slideUp().parent().removeClass('open');
+            // debugger
+             if (!e.data.multiple) {
+                 $el.find('.navul').not($this.parents($el.selector + ' li').find('.navul')).slideUp().parent().removeClass('open');
+             };
+            return false
+         }
+
+         var accordion = new Accordion($('#accordion'), false);
+     });</script>
+    </article>
+<div id="headercontainer" layout_type="zone" class="headercontainer lyrow">
+<div id="headerzonecontainer" layout_type="zonecontainer" class="headerzonecontainer">
+<div  layout_type="container" id="container_201912060911044614">
+<style id="style_container_201912060911044614" type="text/css">
+#container_201912060911044614  {background-position:no-repeat;}
+#container_201912060911044614  {background-attachment:scroll;}
+@media screen and (min-width: 768px){
+#container_201912060911044614  {padding-top:10px;}
+#container_201912060911044614  {padding-bottom:10px;}
+#container_201912060911044614  {border-type:none;}
+}
+@media screen and (max-width: 767px){
+#container_201912060911044614  {background-position:no-repeat;}
+#container_201912060911044614  {background-attachment:scroll;}
+}
+</style>
+<div class="row clearfix container" layout_type="domcontainer">
+<style id="style_dom_201912060911046461" type="text/css">
+</style>
+<div class="col-md-4 col-sm-4 col-xs-12  column dom_layout" layout_type="dom" id="dom_201912060911046461">
+<div  class="module   " id="module_201912060911294098"     layout_htmid="300" layout_type="module" layout_data_type="0"  ><div id="body_module_201912060911294098"  class="body_module" layout_type="body"><div class="ModuleItem  StaticModule " wo="478" id="module_module_201912060911294098" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleImageGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'   data-wow-duration="1.5s">
+{foreach from=$moban_get_module_data_list(module_201912060911294098) item=item  name=item}
+<div class="animationimage imagetext_item">
+<a href="{$item.url}" target="">
+<img class="image-animation imagetext_item_images" src="{$item.thumb}" alt="{$item.title}" />
+</a>
+</div>
+{/foreach} 
+</div>
+</div></div><style id="style_module_201912060911294098" type="text/css">
+@media screen and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912060911294098{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912060911294098{display:none;}
+}
+</style>
+</div>
+<style id="style_dom_201912060911045366" type="text/css">
+</style>
+<div class="col-md-8 col-sm-8 col-xs-12  column dom_layout" layout_type="dom" id="dom_201912060911045366">
+<div  class="module   " id="module_201912060911535620"     layout_htmid="85" layout_type="module" layout_data_type="2"  ><div id="body_module_201912060911535620"  class="body_module" layout_type="body"><style>
+	.ModuleNavGiant.layout-85 .main-nav-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow:hidden;
+}
+.ModuleNavGiant.layout-85 .aroundMune{
+   position: absolute;
+   display: flex;
+   align-items: center;
+   right: 0px;
+   padding:0 10px;
+   height: 100%;
+   z-index: 5;
+   transform: rotateY(90deg);
+}
+.ModuleNavGiant.layout-85 .aroundMune.active{
+  transform: rotateY(0deg);
+}
+.ModuleNavGiant.layout-85 .moveMenuRight, .ModuleNavGiant.layout-85 .moveMenuLeft{
+   display: inline-block;
+   width: 36px;
+   height: 36px;
+   line-height: 36px;
+   font-size: 16px;
+   color:#666;
+   text-align: center;
+   border:1px solid rgba(0,0,0,.1);
+   border-radius: 5px;
+   cursor: pointer;
+   vertical-align: top;
+}
+.ModuleNavGiant.layout-85 .main-nav-content .moveMenuRight{
+  background-color: rgba(238,238,238,.6);
+}
+.ModuleNavGiant.layout-85 .main-nav-content .moveMenuLeft{
+   display:none;
+   background-color: rgba(238,238,238,.6);
+   margin-right: 10px
+
+}
+.ModuleNavGiant.layout-85 .moveMenuRight:hover, .ModuleNavGiant.layout-85 .moveMenuLeft:hover{
+   color:#fff;
+   background-color:rgba(204,204,204,.6);
+}
+.ModuleNavGiant.layout-85 .main-nav-content >.blank-solve{
+  width: auto;
+  display: inline-block;
+  transition: all .4s;
+  position: relative;
+  left: 0;
+  vertical-align: top;
+}
+.ModuleNavGiant.layout-85 .main-nav-item-group {
+  box-sizing: border-box;
+  -moz-box-sizing:border-box; 
+ -webkit-box-sizing:border-box;
+  height: auto;
+  line-height: initial;
+  text-align: center;
+  float: left;
+}
+.ModuleNavGiant.layout-85 .main-nav-item {
+  box-sizing: content-box;
+  -moz-box-sizing:content-box; 
+ -webkit-box-sizing:content-box;
+  padding: 0 25px;
+  color: #000000;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  vertical-align: top;
+}
+.ModuleNavGiant.layout-85 .main-nav-item::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+   -ms-transform:translateY(-50%);
+  -moz-transform:translateY(-50%); 
+  -webkit-transform:translateY(-50%);
+  -o-transform:translateY(-50%); 
+  top: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s; 
+  -o-transition: all 0.5s;
+}
+
+.ModuleNavGiant.layout-85 .main-nav-item-hover::before {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+}
+.ModuleNavGiant.layout-85 .sub-nav-item-group {
+  z-index: 3;
+  height: 200px;
+  bottom: -220px;
+  left: -49px;
+  width: 192px;
+  padding-top: 20px;
+  text-align: center;
+  display: none;
+}
+.ModuleNavGiant.layout-85 .sub-nav-item-box {
+  width: 100%;
+  position: relative;
+}
+/*
+.ModuleNavGiant.layout-85 .sub-nav-item-box ::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -5px;
+  width: 0px;
+  height: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+}
+*/
+.ModuleNavGiant.layout-85 .sub-nav-item-group{
+	position: relative;
+}
+.ModuleNavGiant.layout-85 .arrow{
+	top:13px;
+	width:15px;
+	height:15px;
+	background:#fff;
+	position: absolute;
+	left: 50%;
+  margin-left: -7.5px;
+	z-index:-1;
+	transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -moz-transform:rotate(45deg); 
+  -webkit-transform:rotate(45deg);
+  -o-transform:rotate(45deg); 
+	transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s; 
+  -o-transition: all 0.5s;
+}
+
+.ModuleNavGiant.layout-85 .sub-nav-item:first-child {
+  border-top: none!important;
+}
+.ModuleNavGiant.layout-85 .sub-nav-item:last-child {
+  border-bottom: none!important;
+}
+.ModuleNavGiant.layout-85 .sub-nav-item {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s; 
+  -o-transition: all 0.5s;
+  font-size: 12px;
+  padding-left: 0;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.ModuleNavGiant.layout-85 .sub-nav-item:hover {
+  padding-left: 10px;
+  background-color: #f7f7f7;
+}
+.ModuleNavGiant.layout-85 .sub-nav-item-group.current {
+  display: block;
+}
+.ModuleNavGiant.layout-85 .main-nav-item-group.current .main-nav-item {
+  color: #fff;
+}
+.ModuleNavGiant.layout-85 .main-nav-item-group.current .main-nav-item::after {
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 20px;
+  height: 40px;
+  position: absolute;
+  z-index: -1;
+  background: #e91e63;
+  border-radius: 20px;
+}
+.ModuleNavGiant.layout-85 .clearfix:after{content:'.';clear: both;display:block;width:0;height:0;overflow: hidden;visibility: hidden;}.module_module_201912060911535620 .ModuleHead .HeadCenter{float:none;}
+#module_module_201912060911535620 {
+padding:0px;
+}
+#module_module_201912060911535620 {
+}
+#module_module_201912060911535620 .ModuleHeadmodule_201912060911535620 {
+display:none;
+}
+
+#module_module_201912060911535620 .main-nav-item-group{height:auto;line-height:initial;} #module_module_201912060911535620 .main-nav-content{height:auto;}
+#module_module_201912060911535620 .main-nav-content{}
+#module_module_201912060911535620 .main-nav-content{}
+#module_module_201912060911535620 .main-nav-content{background-repeat:no-repeat;}
+#module_module_201912060911535620 .main-nav-content{}
+#module_module_201912060911535620 .main-nav-content{}
+#module_module_201912060911535620 .main-nav-content{text-align:center;}
+#module_module_201912060911535620 .main-nav-item{font-size:16px;}
+#module_module_201912060911535620 .main-nav-item{font-family:;}
+#module_module_201912060911535620 .main-nav-item{color:;}
+#module_module_201912060911535620 .main-nav-item{font-weight:normal;}
+#module_module_201912060911535620 .main-nav-item{text-decoration:none;}
+#module_module_201912060911535620 .main-nav-item{font-style:normal;}
+#module_module_201912060911535620 .main-nav-item{width:auto;}
+#module_module_201912060911535620 .main-nav-item{padding-left:25px;padding-right:25px;}
+#module_module_201912060911535620 .sub-nav-item-group{width:192px;}
+#module_module_201912060911535620 .sub-nav-item{height:40px;line-height:40px;}
+#module_module_201912060911535620 .sub-nav-item{font-size:14px;}
+#module_module_201912060911535620 .sub-nav-item{font-family:;}
+#module_module_201912060911535620 .sub-nav-item{color:#000;}
+#module_module_201912060911535620 .sub-nav-item{font-weight:normal;}
+#module_module_201912060911535620 .sub-nav-item{text-decoration:none;}
+#module_module_201912060911535620 .sub-nav-item{font-style:normal;}
+#module_module_201912060911535620 .sub-nav-item,#module_module_201912060911535620 .arrow,#module_module_201912060911535620 .sub-normal-color{background-color:#fff;}
+#module_module_201912060911535620 .sub-nav-item{}
+#module_module_201912060911535620 .sub-nav-item{background-repeat:no-repeat;}
+#module_module_201912060911535620 .sub-nav-item{}
+#module_module_201912060911535620 .sub-nav-item{}
+#module_module_201912060911535620 .sub-nav-item{border-bottom-color:#e6e6e6;}
+#module_module_201912060911535620 .sub-nav-item{border-bottom-style:solid;}
+#module_module_201912060911535620 .sub-nav-item{border-bottom-width:1px;}
+#module_module_201912060911535620 .sub-nav-item{margin-bottom:0px;}
+#module_module_201912060911535620 .main-nav-item-group a{display:block;}
+#body_module_201912060911535620 {display: inline-block;vertical-align: top;}
+
+
+#module_module_201912060911535620 .menu_item.main-nav-item-hover {
+  background-color: ;
+  color: rgba(0, 0, 0, 1);
+  background-image: url();
+  background-attachment: scroll;
+  background-repeat: ;
+  background-position: no-repeat;
+
+}
+
+</style>
+
+<div class="ModuleItem  "  id="module_module_201912060911535620" CanEdit='1' IsDefaultStyle='1' ModuleType='ModuleNavGiant' isDragItem='true' data-lock='1' isSystemInjected='0' CanConfig='1'  >
+<div class="ModuleNavGiant layout-85 layout-color-blue module_module_201912060911535620 clearfix">
+            <!-- 头部 -->
+    
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCentermodule_201912060911535620 clearfix'><div class='main-nav-content menu_bar pre_nav clearfix' AlwaysShow="0">
+    <!--div class="aroundMune">
+      <div class="moveMenuLeft iconfont icon-xiangzuojiantou" ></div>
+	  <div class="moveMenuRight iconfont icon-xiangyoujiantou"></div>
+    </div-->
+  <div class="blank-solve">
+			<div id="Menu_548082_module_201912060911535620" class="main-nav-item-group menu_bar" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this, event)">
+								<a href="{$weburl}" target="_self" class="main-nav-item fontm OneRow menu_item">{$lang.home}</a>
+		<div id="SubMenu_548082_module_201912060911535620" class="sub-nav-item-group">
+			<div class='arrow'></div>
+			<div class="sub-nav-item-box ">
+						</div>
+		</div>
+	</div>
+	
+	{foreach name=nav from=$moban_get_navigator_list() item=nav key=key }
+		<div id="Menu_548084_module_201912060911535620" class="main-nav-item-group menu_bar" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this, event)">
+								<a href="{$nav.url}" target="_self" class="main-nav-item fontm OneRow menu_item">{$nav.cat_name}</a>
+		{if $nav.ifxiala}
+		<div id="SubMenu_548084_module_201912060911535620" class="sub-nav-item-group">
+			<div class='arrow'></div>
+			<div class="sub-nav-item-box ">
+		
+            {foreach name=snav from=$nav.articlelist item=snav  }
+            <a href="{$snav.url}" target="_self" class="sub-nav-item OneRow menu_item_one">{$snav.title}</a>
+            {/foreach}
+						  {foreach name=snav from=$nav.catlist item=snav  }
+            <a href="{$snav.url}" target="_self" class="sub-nav-item OneRow menu_item_one">{$snav.cat_name}</a>
+            {/foreach}
+						</div>
+		</div>
+		{/if}
+	</div>
+   {/foreach}
+		
+	  </div>	
+</div>
+<div class='sub-hover-color'></div>
+<div class='sub-normal-color'></div>
+<script>
+addScript('/skinp/modules/ModuleNavGiant/menu.js',function(){
+	initModuleNavGiant("module_201912060911535620","85");
+});
+$('.sub-nav-item').mouseenter(function(){
+	var item = $(this);
+	if($(item).index() == 0){
+		$(item).closest(".sub-nav-item-group").find(".arrow").css("background",$("#module_module_201912060911535620 .sub-hover-color").css('background-color'));
+	}
+}).mouseleave(function(){
+	$(this).closest(".sub-nav-item-group").find(".arrow").css("background",$("#module_module_201912060911535620 .sub-normal-color").css('background-color'));
+});
+</script></div>
+</div>
+
+</div>
+</div></div><style id="style_module_201912060911535620" type="text/css">
+#module_201912060911535620  {background-position:no-repeat;}
+#module_201912060911535620  {background-attachment:scroll;}
+#module_201912060911535620:hover  {background-position:no-repeat;}
+#module_201912060911535620:hover  {background-attachment:scroll;}
+#module_201912060911535620  .menu_item {background-position:no-repeat;}
+#module_201912060911535620  .menu_item {background-attachment:scroll;}
+#module_201912060911535620  .menu_bar{background-position:no-repeat;}
+#module_201912060911535620  .menu_bar{background-attachment:scroll;}
+#module_201912060911535620   .menu_item_one {background-position:no-repeat;}
+#module_201912060911535620   .menu_item_one {background-attachment:scroll;}
+#module_201912060911535620  .menu_item:hover {background-position:no-repeat;}
+#module_201912060911535620  .menu_item:hover {background-attachment:scroll;}
+#module_201912060911535620  .menu_bar{hover_background-position:no-repeat;}
+#module_201912060911535620  .menu_bar{hover_background-attachment:scroll;}
+#module_201912060911535620  .menu_item_one:hover {background-position:no-repeat;}
+#module_201912060911535620  .menu_item_one:hover {background-attachment:scroll;}
+#module_201912060911535620  {text-align:center;}
+#module_201912060911535620  .menu_item {padding-top:5px;}
+#module_201912060911535620  .menu_item {padding-bottom:5px;}
+#module_201912060911535620  .menu_item {padding-left:30px;}
+#module_201912060911535620  .menu_item {padding-right:30px;}
+#module_201912060911535620  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912060911535620:hover  {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912060911535620  .menu_item {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912060911535620  .menu_bar{box-shadow: 0px 0px 0px 0px   ;}
+#module_201912060911535620   .menu_item_one {box-shadow: 0px 0px 0px 0px   ;}
+#module_201912060911535620  .menu_item {color:#ff9900;}
+#module_201912060911535620  .menu_item:hover {color:rgba(0, 0, 0, 1);}
+@media screen and (min-width: 768px){
+#module_201912060911535620  {padding-top:20px;}
+#module_201912060911535620  {padding-bottom:20px;}
+#module_201912060911535620  {border-type:none;}
+#module_201912060911535620:hover  {pc-border-type:none;}
+}
+@media screen and (max-width: 767px){
+}
+@media screen and (min-width: 768px){
+#body_module_201912060911535620{display:block;}
+}
+@media screen and (max-width: 767px){
+#body_module_201912060911535620{display:block}
+}
+</style>
+</div>
+</div>
+</div>
+</div>
+</div>

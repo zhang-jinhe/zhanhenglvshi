@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>标题</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<link href="{$ecsolve_path}/css/iframe.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+ 
+</head>
+<body style="overflow: unset;">
+<div  class="wxzHeader headerWrap">		
+  <div class="wxzSwitch switchStation" style="width: 90px; display: block;">
+    <ul class="clear_x fl_x">
+      <li id="liToPCDesign" uisize="3" style="display: block;"><a href="javascript:;" onclick="toggleMobilePadDesignUI(3);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="电脑(&gt;1200像素)"><i class="icon desktopIco"></i></a></li>
+      <li id="liToMobileDesign" uisize="0" style="display: block;"><a href="javascript:;" onclick="toggleMobilePadDesignUI(0);" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="手机(&lt;768像素)"><i class="icon mobileIco"></i></a></li>
+    </ul> 
+</div>  	 
+</div> 
+</div>
+
+<div class="previewCont">
+  <div class="designBox">
+    <div class="left_con" >
+      <div class="pageFrameBody" >
+        <iframe id="framesrc"  name="framesrc" frameborder="0" src="{$domain}" style="height: 690px; box-shadow: rgb(228, 228, 228) 0px 0px 0px 1px;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+ <script>
+    function toggleMobilePadDesignUI(deviceType) {
+      if (deviceType == 3) {
+        $("#liToPCDesign > a i").addClass("active");
+        $("#liToHPadDesign > a i").removeClass("active");
+        $("#liToPadDesign > a i").removeClass("active");
+        $("#liToMobileDesign > a i").removeClass("active");
+        $(".exit-preview").css("margin-top", "-42px");
+        $(".erweim").hide();
+        $("#liToqrcode").hide();
+
+        $(".left_con").css({width: '100%'});
+      }
+      else 
+	  {
+        $("#liToPCDesign > a i").removeClass("active");
+        $("#liToHPadDesign > a i").removeClass("active");
+        $("#liToPadDesign > a i").removeClass("active");
+        $("#liToMobileDesign > a i").addClass("active");
+        $(".left_con").css({width: '425px'});
+      }
+      var pageFrameBodyBgUrl = "url({$ecsolve_path}/images/mobile_frame_bg.png)";//模型背景图
+      var pageFrameBodyMarginTop = 20;//模型框架外上边距
+      var pageFrameBodyMarginBottom = 42;//模型框架外下边距
+      var pageFrameBodyPaddingTop = 82;//模型框架内上边距
+      var pageFrameBodyPaddingBottom = 87;//模型框架内下边距
+      var pageFrameBodyPaddingLeft = 19;//模型框架内左边距
+      var pageFrameBodyPaddingRight = 26;//模型框架内右边距
+      var pageFrameBodyHeignt = 843;//模型框架高度
+      var pageFrameHeight = pageFrameBodyHeignt - pageFrameBodyPaddingTop - pageFrameBodyPaddingBottom;//iframe高度
+      var pagebodyWidth = 375 + pageFrameBodyPaddingLeft + pageFrameBodyPaddingRight;
+      $('body').css("overflow", "unset");
+      if (deviceType == 3) {
+        pagebodyWidth = "100%";
+        pageFrameBodyBgUrl = "unset";
+        pageFrameBodyMarginTop = 0;
+        pageFrameBodyMarginBottom = 0;
+        pageFrameBodyPaddingTop = 0;
+        pageFrameBodyPaddingBottom = 0;
+        pageFrameBodyPaddingLeft = 0;
+        pageFrameBodyPaddingRight = 0;
+        pageFrameBodyHeignt = $(window).height() - 55;
+        $('body').css("overflow", "hidden");
+        $("#pageframe").width($(window).width());
+      }
+      $('.pageFrameBody').css({
+        "margin": "0 auto",
+        "background-repeat": "no-repeat",
+        "background-size": "contain",
+        "background-image": pageFrameBodyBgUrl,
+        "height": pageFrameBodyHeignt,
+        "width": pagebodyWidth,
+        "padding-top": pageFrameBodyPaddingTop,
+        "padding-left": pageFrameBodyPaddingLeft,
+        "padding-right": pageFrameBodyPaddingRight,
+        "padding-bottom": pageFrameBodyPaddingBottom,
+        "margin-top": pageFrameBodyMarginTop,
+        "margin-bottom": pageFrameBodyMarginBottom,
+      });
+      $('#framesrc').css("height", (deviceType == 3) ? ($(window).height() - 55) : pageFrameHeight);
+      return false;
+    }
+
+    
+  </script>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加/编辑菜单</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+.ur_here {
+height:40px;
+line-height:40px;
+margin-bottom:5px;
+padding-left:20px;
+background-color:#fff;
+}
+.add_order_table{background:#fff;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+float:left;
+margin-top: 13px;
+cursor: pointer;
+width: 10px;
+height: 10px;
+}
+.client-div-select {margin-right:5px;}
+</style>
+</head>
+
+<body>
+<div class="body_hei"></div>
+<div class="body">
+<div class="ur_here">当前位置 &gt; {$ur_here} - <a href="navigator.php?act=list">返回菜单列表</a></div>
+
+<form enctype="multipart/form-data" action="" method="post" name="theForm"  id="theForm" >
+
+<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody style="width:100%">
+
+<tr style="width:100%;">
+<td width="30%" align="right">选择类目：</td>
+<td>
+
+
+<select onchange="add_main(this.value);" name="menulist" id="menulist">
+<option value=' ' nvalue=" " {if $ope.open_lang}nvalue{$select_lang}=" "{/if}  nurl="0"  nctype="inner"   cat_id='0' >请选择菜单</option>
+
+
+{foreach from=$sysmain item=val key=key}
+<option value='{$val.cat_id}' nvalue="{$val.cat_name}" {if $ope.open_lang}nvalue{$select_lang}="<?php echo $GLOBALS[smarty]->_var[val]['cat_name'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>"{/if}  nctype="inner" cat_id="{$val.cat_id}"  {if $val.cat_id eq $rt.cid}selected="true"{/if}>
+{$val.view_name}</option>
+{/foreach}
+
+
+
+
+
+</td>
+</tr>
+
+<tr style="width:100%;">
+<td width="30%" align="right">定义名称：</td>
+<td>
+<input  name="cat_name" value="{$rt.cat_name}" id="cat_name" placeholder="菜单名称"  required="true">
+{if $ope.open_lang}
+<input  name="cat_name{$select_lang}" value="<?php echo $GLOBALS[smarty]->_var[rt]['cat_name'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>" id="cat_name{$select_lang}" placeholder="{$langc.$select_lang}菜单名称"  required="true">
+{/if}
+</td>
+</tr>
+
+
+
+<tr style="width:100%;" >
+<td width="30%" align="right">跳转链接：</td>
+<td>
+<input name="durl" value="{$rt.durl}" id="durl" placeholder="默认为空"  >
+<a href="javascript:;" style="border:1px solid #ddd; padding:5px;color:#999;"  class="inner"  onclick="searcharticle('article')">启用</a>  
+<span id="closed" style="display:none;" >
+<input  name="article_keywords" type="hidden" id="article_keywords"  type="hiden" zhiduan="title" cat_id="" placeholder="标题关键词"  style="width:100px;cursor:text;" >
+<!--<a href="javascript:;" style=" padding:5px;"  class="input_button" onclick="searcharticle('article')">搜索</a>--> 
+<select name="article_id" onchange="add_smallmain(this.value);" name="smallmenulist" id="smallmenulist">
+{$goods.option}
+</select>
+</span>
+
+</td>
+</tr>
+
+{if $ope.ifxiala}
+<tr style="width:100%;">
+<td width="30%" align="right">下拉显示：</td>
+<td>
+<select name="ifxiala">
+<option value='1' {if $rt.ifxiala eq 1}selected{/if}>显示</option>
+<option value='0' {if $rt.ifxiala eq 0}selected{/if}>不显示</option>
+</select>
+</td>
+</tr>
+{/if}
+
+
+<tr style="width:100%;">
+<td width="30%" align="right">是否显示：</td>
+<td>
+<select name="ifshow">
+<option value='1' {if $rt.ifshow eq 1}selected{/if}>显示</option>
+<option value='0' {if $rt.ifshow eq 0}selected{/if}>不显示</option>
+</select>
+</td>
+</tr>
+
+<tr style="width:100%;">
+<td width="30%" align="right">显示类型：</td>
+<td>
+<select name="type">
+<option value='middle' {if $rt.type eq 'middle'} selected{/if}>中间导航</option>
+<option value='top' {if $rt.type eq 'top'}selected{/if}>顶部导航</option>
+<option value='bottom' {if $rt.type eq 'bottom'} selected{/if}>底部导航</option>
+</select>
+</td>
+</tr>
+
+
+
+
+<tr style="width:100;height:10px;"></tr>
+</tbody>
+</table>		
+<div class="floor_operation a_center">
+<input type="hidden"  name="ctype"   id="ctype"     value="inner" />
+<input  name="url"    type="hidden"  id="url" value="{$rt.url}" placeholder=" "  >
+<input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+
+<input type="hidden"  name="id"       value="{$rt.id}" />
+</div>
+<input type="hidden" name="act" value="{$form_action}" />
+</div>
+</form>
+</div>
+
+
+<script type="Text/Javascript" language="JavaScript">
+
+
+function add_main(key)
+{
+$("#cat_name").val(Trim($("#menulist").find("option:selected").attr("nvalue")));
+$("#cat_name{$select_lang}").val(Trim($("#menulist").find("option:selected").attr("nvalue{$select_lang}")));
+$("#url").val(Trim($("#menulist").find("option:selected").attr("cat_id")));
+$("#durl").val('');	
+}
+
+
+
+
+
+
+
+
+
+function Trim(str) { return str.replace(/[&\|\\\*^%$#@\]/g,""); }
+
+
+function openshow()
+{
+$("#closed").show();
+$("#article_keywords").attr("cat_id",Trim($("#menulist").find("option:selected").val()));
+searcharticle('article');
+}
+
+function searcharticle(typekey)
+{  
+   $("#closed").show();
+   $("#article_keywords").attr("cat_id",Trim($("#menulist").find("option:selected").val()));
+
+
+   var keywords = $("#"+typekey+"_keywords").val();//字段
+   var zhiduan = $("#"+typekey+"_keywords").attr("zhiduan");//字段
+   var cat_id = $("#"+typekey+"_keywords").attr("cat_id");//字段
+   var type =typekey;
+	$.ajax({
+    type: "GET",
+    url: "navigator.php?act=searcharticle",
+	data: {'keywords':keywords,'zhiduan':zhiduan,'cat_id':cat_id,'type':type},
+    dataType: "json",
+    success: function(result){
+
+	var frm = document.forms['theForm'];
+	var sel = frm.elements[result.type+'_id'];
+	var value=type+'_id';
+	var text=result.zhiduan;
+	if (result.error == 0)
+	{
+	/* 清除 options */
+	sel.length = 0;
+	/* 创建 options */
+	var contents = result.content;
+	if (contents)
+	{
+		for (i = 0; i < contents.length; i++)
+		{
+			var opt = document.createElement("OPTION");
+			opt.value = contents[i][value];
+			opt.text  = contents[i][text];
+			sel.options.add(opt);
+		}
+	}
+	else
+	{
+		var opt = document.createElement("OPTION");
+		opt.value = 0;
+		opt.text  = search_is_null;
+		sel.options.add(opt);
+	}
+	}
+
+
+    }
+    });
+
+
+}
+
+function add_smallmain(key)
+{
+
+var dur= Trim($("#smallmenulist").find("option:selected").val()); 
+$("#durl").val(dur); 
+
+}
+</script>
+
+
+</body></html>

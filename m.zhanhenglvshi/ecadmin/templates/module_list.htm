@@ -1,0 +1,245 @@
+{if $full_page eq 1}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{if $ur_here}{$ur_here} - {/if}{$lang.cp_home}</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+.sign_ul{width:170px;position:absolute;left:-60px;top:30px;background:#fff;border:1px solid #ccc;}
+.sign_ul li{width:100%;height:20px;line-height:20px;font-size:14px;text-align:left;cursor:pointer;text-indent:10px;}
+.sign_ul li input{width:70px;line-height:20px;font-size:12px;float:left;color:#999;text-indent:0px;}
+.sign_ul .sign_last{cursor:auto;}
+
+.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.look{margin-top: 15px;text-indent:20px;}
+</style>
+</head>
+
+<body>
+
+<div class="body_hei"></div>
+<div class="body" 	id="listDiv">
+{/if}
+		<div class="ur_here">当前位置 &gt; 文章信息</div>
+		
+		<div class="search">
+			<form action="javascript:searchmodule()" name="searchForm" >
+			<div class="search_ul">
+				
+				<div class="where">
+					<div class="where_title">模块id：</div>
+					<div class="where_text" style="width:auto;">
+						<input type="text" name="keyword" id="keyword"  size="15" />
+					</div>
+				</div>
+				
+				
+				<input name="page" value="1" type="hidden">
+				<input name="size" value="20" type="hidden">
+				<div class="submit"><input name="" value="搜索" type="submit"></div>
+
+				
+			</div>
+<div class="search_ul">
+				
+				<div class="look">
+
+			复制“页面模块” 的ID，并在此搜索进行修改
+			
+
+</div></div>
+			</form>
+
+
+
+
+
+
+
+			
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  
+			  <div class="modal-body">
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div id="is_modal">
+			
+			<div class="is_modal_title">
+				<div class="is_modal_x" onclick="close_div('is_modal')">X</div>
+				<div>弹出框</div>
+			</div>
+			<div class="is_modal_content">
+				
+			</div>
+			<div class="is_modal_floor">
+				<button type="button" class="is_modal_close" onclick="close_div('is_modal')">关闭</button>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+
+
+		<div class="order_list" >
+			<table class="table-hover" cellspacing="0" cellpadding="0" border="0">
+			<thead style="background-color:rgb(224,224,224);">
+				<tr>
+					<td>ID</td>
+					
+					<td class="colum_2">模块类型</td>
+					<td class="colum_2">数据类型</td>
+					
+					<td >操作</td>
+				</tr>
+			</thead>
+				<tbody>	
+				{foreach from=$module_list item=list}
+				<tr>
+					<td>{$list.module_id}</td>
+					
+					<td class="colum_2" style="text-align:left;padding-left:20px;width:30%">{$list.module_type}</td>
+					<td class="colum_2" style="text-align:left;padding-left:20px;width:30%">{$list.module_data_type}
+					
+					{if $list.module_data_type}系统数据{else}模块数据{/if}
+
+					
+					</td>
+					
+					
+					<td>
+
+					
+
+					{if $list.module_data_type eq 0}
+					 <a class="glyphicon glyphicon-pencil" href="module.php?act=edit&id={$list.module_id}" title="编辑"></a>
+					{/if} 
+
+
+					{if $list.module_data_type eq 1}
+					{if $list.module_type eq 'search' ||  $list.module_type eq 'articlelist' || $list.module_type eq 'infolist' || $list.module_type eq 'catlist' || $list.module_type eq 'downlist'}
+					<a class="glyphicon glyphicon-pencil" href="module.php?act=edit&id={$list.module_id}" title="编辑"></a>
+					{/if} 
+					{/if} 
+
+
+					{if $list.module_data_type eq 2}
+                    {if $list.module_type eq 'map'  || $list.module_type eq 'video'  }
+					<a class="glyphicon glyphicon-pencil" href="module.php?act=edit&id={$list.module_id}" title="编辑"></a>
+					{/if} 
+
+
+					{/if}
+
+
+	
+			     
+						
+					</td>
+				</tr>
+				{/foreach}
+				
+				</tbody></table>
+		</div>
+		<div class="searchRight_paging">
+			<div id="pager" class="pagebar">
+				{include file="page.htm"}
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="floor_operation">
+		
+		</div>
+<script>
+
+listTable.recordCount = {$record_count};
+listTable.pageCount = {$page_count};
+
+{foreach from=$filter item=item key=key}
+listTable.filter.{$key} = '{$item}';
+{/foreach}
+
+// 全选、取消全选  
+function checkAll(obj){
+	if(obj){
+		var is_checked = obj.checked;
+		if(is_checked == true){
+			$('input[name="box[]"]').each(function(i,e){
+				$(e)[0].checked = true;
+			});
+			sumCheckbox();
+		}else{
+			$('input[name="box[]"]').each(function(i,e){
+				$(e)[0].checked = false;
+			});
+			sumCheckbox();
+		}
+	}
+}
+function close_div(name){
+	$("#"+name).hide();
+	$('.body_hei').hide();
+}
+
+// 统计已选中多选框个数
+function sumCheckbox(){
+	var num = $('input[name="box[]"]:checked').length;
+	$('#order_num').text(num);
+}
+
+// 批量操作
+function deletes(){
+	var id = [];
+	$('input[name="box[]"]:checked').each(function(){
+		id.push($(this).val());
+	});
+	if(id.length > 0){
+		if(confirm('警告：确定要删除选中的文章吗？')){
+			$.post('module.php?act=batch',{id:id},function(data){
+				if(data.err=='1')
+				{
+				alert(data.message);
+				}
+				if(data.err=='0')
+				{
+				location.reload();
+				}
+			},'json');
+		}
+	}else{
+		alert('请选择要操作的文章');
+	}
+}
+function fun(url) {
+	window.location.href = url; 
+} 
+
+ function searchmodule()
+ {
+    listTable.filter.keyword = Utils.trim(document.forms['searchForm'].elements['keyword'].value);
+    listTable.filter.page = 1;
+    listTable.loadList();
+ }
+</script>
+{if $full_page eq 1}
+</div>
+</body></html>
+{/if}

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>产品信息</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<link href="{$ecsolve_path}/css/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+<style>
+	.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.add_order_table{background:#fff;border: 1px solid #ccc;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+	float:left;
+	margin-top: 13px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+.add_order_table td{width:25%;text-align:left;padding-left:20px;}
+.client-div-select {margin-right:5px;}
+</style>
+</head>
+
+<body>
+	<div class="body_hei"></div>
+	<div class="body">
+		
+	<div class="ur_here">系统信息</div>
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="1" cellpadding="3" border="1">
+		<tbody style="width:100%">
+		<tr><td align="">服务器系统：</td><td>{$sys_info.os}</td><td align="">Web 服务器：</td><td>{$sys_info.web_server}</td></tr>
+		<tr><td align="right">Web 服务器：</td><td>{$sys_info.web_server}</td><td align="right">PHP 版本：</td><td>{$sys_info.php_ver}</td></tr>
+		<tr><td align="right">MySQL 版本:：</td><td>{$sys_info.mysql_ver}</td><td align="right">安全模式：</td><td>{$sys_info.safe_mode}</td></tr>
+		<tr><td align="right">安全模式GID：</td><td>{$sys_info.safe_mode_gid}</td><td align="right">Socket 支持：</td><td>{$sys_info.socket}</td></tr>
+		<tr><td align="right">时区设置：</td><td>{$sys_info.timezone}</td><td align="right">GD 版本：</td><td>{$sys_info.gd}</td></tr>
+		<tr><td align="right">Zlib 支持：</td><td>{$sys_info.zlib}</td><td>编码:</td><td>UTF-8</td></tr>
+		</tbody>
+		</table>
+		<div class="floor_operation a_center">
+		  
+        </div>
+		
+
+
+		
+		
+    
+		</div>
+		</form>
+	</div>
+
+
+</body></html>

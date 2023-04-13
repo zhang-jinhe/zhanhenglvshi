@@ -1,0 +1,307 @@
+{if $full_page eq 1}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>信息栏目</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<style>
+.sign_ul{width:170px;position:absolute;left:-60px;top:30px;background:#fff;border:1px solid #ccc;}
+.sign_ul li{width:100%;height:20px;line-height:20px;font-size:14px;text-align:left;cursor:pointer;text-indent:10px;}
+.sign_ul li input{width:70px;line-height:20px;font-size:12px;float:left;color:#999;text-indent:0px;}
+.sign_ul .sign_last{cursor:auto;}
+
+.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+</style>
+</head>
+
+<body>
+<div class="body_hei"></div>
+<div class="body" 	id="listDiv">
+{/if}
+<div class="ur_here">当前位置 &gt; 栏目</div>
+		
+<div class="order_list" id="listDiv">
+			<table class="table-hover" cellspacing="0" cellpadding="0" border="0" id="list-table">
+			<thead style="background-color:rgb(224,224,224);">
+				<tr>
+				
+					
+					<td >栏目名</td>
+					<td>栏目ID</td>
+					<td>栏目导航显示</td>
+					
+					<td class="colum_2">栏目排序（值越小越排前）</td>
+					
+					<td >操作</td>
+				</tr>
+			</thead>
+				
+				{foreach from=$articlecat item=cat}
+				
+				<tr class="{$cat.level}" id="{$cat.level}_{$cat.cat_id}">
+					
+					
+					<td style="text-align:left;padding-left:30px;width:40%"> {if $cat.is_leaf neq 1}
+      <img src="images/menu_minus.gif" id="icon_{$cat.level}_{$cat.cat_id}" width="9" height="9" border="0" style="margin-left:{$cat.level}em" onclick="rowClicked(this)" />
+      {else}
+      <img src="images/menu_arrow.gif" width="9" height="9" border="0" style="margin-left:{$cat.level}em" />
+      {/if}
+
+      <span><a href="article.php?act=list&amp;cat_id={$cat.cat_id}">{$cat.cat_name|escape}</a></span>
+	  
+	  
+	  </td>
+	  <td >{$cat.cat_id}</td>
+
+	  <td width="30%">{if $cat.cat_id > 0}<span>
+	  
+    <img src="{$ecsolve_path}/images/{if $cat.is_nav_show eq 1}yes{else}no{/if}.gif" onclick="is_nav_show({$cat.cat_id})" /></span>{else}{$cat.cat_id}<img src="{$ecsolve_path}/images/yes.gif" alt="yes" />{/if}
+	
+	
+	
+	
+	</td>
+
+	<td class="colum_2" width="20%">
+
+
+	<span class="sort_order " style="display: inline;border:1px solid #ddd;     border-radius: 3px; padding:5px 20px;">{$cat.sort_order}</span>
+	
+	<span class="textInput" style="display: none;">
+	<input type="hidden" name="cat_id" value="{$cat.cat_id}">
+	<input name="sort_order" type="text" value="{$cat.sort_order}">
+	<span class="postsort_order">确定</span>
+	</span>
+
+
+
+	</td>
+
+					<td  >
+					
+					<a class="glyphicon glyphicon-pencil" href="articlecat.php?act=edit&id={$cat.cat_id}" title="编辑"></a>
+					
+
+					{if $cat.id neq '7' &&  $cat.id neq '2' && $cat.id neq '1' && $cat.id neq '6'&& $cat.id neq '14'}
+
+					<div class="glyphicon glyphicon-trash" onclick="listTable.remove({$cat.cat_id}, '确定删除？')" title="删除"></div>
+					
+					{/if}
+					</td>
+					
+				
+				</tr>
+			{/foreach}
+			</table>
+		</div>
+		
+		<div class="floor_operation">
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  
+		  <div class="modal-body">
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+<script>
+var imgPlus = new Image();
+imgPlus.src = "images/menu_plus.gif";
+
+/**
+ * 折叠栏目列表
+ */
+function rowClicked(obj)
+{
+   // 当前图像
+  img = obj;
+  // 取得上二级tr>td>img对象
+  obj = obj.parentNode.parentNode;
+  // 整个栏目列表表格
+  var tbl = document.getElementById("list-table");
+  // 当前栏目级别
+  var lvl = parseInt(obj.className);
+  // 是否找到元素
+  var fnd = false;
+  var sub_display = img.src.indexOf('menu_minus.gif') > 0 ? 'none' : (Browser.isIE) ? 'block' : 'table-row' ;
+  // 遍历所有的栏目
+  for (i = 0; i < tbl.rows.length; i++)
+  {
+      var row = tbl.rows[i];
+      if (row == obj)
+      {
+          // 找到当前行
+          fnd = true;
+          //document.getElementById('result').innerHTML += 'Find row at ' + i +"<br/>";
+      }
+      else
+      {
+          if (fnd == true)
+          {
+              var cur = parseInt(row.className);
+              var icon = 'icon_' + row.id;
+              if (cur > lvl)
+              {
+                  row.style.display = sub_display;
+                  if (sub_display != 'none')
+                  {
+                      var iconimg = document.getElementById(icon);
+                      iconimg.src = iconimg.src.replace('plus.gif', 'minus.gif');
+                  }
+              }
+              else
+              {
+                  fnd = false;
+                  break;
+              }
+          }
+      }
+  }
+
+  for (i = 0; i < obj.cells[0].childNodes.length; i++)
+  {
+      var imgObj = obj.cells[0].childNodes[i];
+      if (imgObj.tagName == "IMG" && imgObj.src != 'images/menu_arrow.gif')
+      {
+          imgObj.src = (imgObj.src == imgPlus.src) ? 'images/menu_minus.gif' : imgPlus.src;
+      }
+  }
+}
+
+</script>
+
+<script>
+$(function(){
+    $(".sort_order").click(function(){
+        $(this).hide();
+        $(this).next().fadeIn('slow');
+    })
+    $(".postsort_order").click(function(){
+        var thisnote = $(this);
+        var sort_order = thisnote.parent().find('input[name="sort_order"]').val();
+        var id = thisnote.parent().find('input[name="cat_id"]').val();
+        var url = 'articlecat.php?act=edit_sort_order';
+        $.post(url,{sort_order:sort_order,id:id},function(data){
+            if(data){
+                thisnote.parent().hide();
+                thisnote.parent().prev().html(sort_order).fadeIn();
+            }else{
+                thisnote.parent().html('保存失败');
+            }
+        })
+    })
+
+
+	$(".inner_nav").click(function(){
+        var thisnote = $(this);
+        var article_id = thisnote.parent().find("select[name='article_id']").val();
+		var ifxiala = thisnote.parent().find("select[name='ifxiala']").val();
+		var cat_id = thisnote.attr('id');
+        var url = 'articlecat.php?act=edit_article_id';
+        $.post(url,{'article_id':article_id,'cat_id':cat_id,'ifxiala':ifxiala},function(data){
+            if(data){
+                //thisnote.parent().hide();
+                //thisnote.parent().prev().html(sort_order).fadeIn();
+				location.reload();
+            }else{
+                thisnote.parent().html('保存失败');
+            }
+        })
+    })
+
+	$(".inner_nav_cancle").click(function(){
+        var thisnote = $(this);
+        var article_id = 0;
+		var cat_id = thisnote.attr('id');
+        var url = 'articlecat.php?act=edit_article_id';
+        $.post(url,{'article_id':article_id,'cat_id':cat_id},function(data){
+            if(data){
+                //thisnote.parent().hide();
+                location.reload();
+            }else{
+                thisnote.parent().html('保存失败');
+            }
+        })
+    })
+
+
+})
+
+function is_nav_show(id){
+$.ajax({
+	type: "POST",
+	url: "articlecat.php?act=is_nav_show",
+	data: {id:id},
+	dataType: "json",
+	success: function(result){
+	location.reload();
+	}
+});
+}
+
+
+function Trim(str) { return str.replace(/[&\|\\\*^%$#@\]/g,""); }
+
+
+function openshow()
+{
+$("#closed").show();
+$("#article_keywords").attr("cat_id",Trim($("#menulist").find("option:selected").val()));
+searcharticle('article');
+}
+
+function searcharticle(typekey,cat_id)
+{  
+   $("#closed_"+cat_id).show();
+   var keywords = $("#"+typekey+"_keywords").val();//字段
+   var zhiduan = $("#"+typekey+"_keywords").attr("zhiduan");//字段
+   
+   var type =typekey;
+	$.ajax({
+    type: "GET",
+    url: "navigator.php?act=searcharticle",
+	data: {'keywords':keywords,'zhiduan':zhiduan,'cat_id':cat_id,'type':type},
+    dataType: "json",
+    success: function(result){
+
+	var frm = document.getElementById("article_id_"+cat_id);
+    var contents=result.content;
+	frm.innerHTML = '<option>请选择跳转的单页</option>';
+	for(var idx in contents) {
+	var option = document.createElement("option");
+	option.value = contents[idx].article_id;
+	option.innerHTML = contents[idx].title;
+	frm.appendChild(option);
+	}
+	
+
+
+    }
+    });
+
+
+}
+</script>
+
+{if $full_page eq 1}
+</div>
+</body></html>
+{/if}

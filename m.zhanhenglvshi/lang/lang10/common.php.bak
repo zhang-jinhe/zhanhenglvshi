@@ -1,0 +1,26 @@
+<?php
+
+/* 分页 */
+
+$_LANG['home'] = 'home ';
+$_LANG['ur_here'] = 'ur_here';
+$_LANG['pager_1'] = 'count ';
+$_LANG['pager_2'] = ' recoder';
+$_LANG['pager_3'] = '，all ';
+$_LANG['pager_4'] = ' page。';
+$_LANG['page_first'] = 'page_first';
+$_LANG['page_prev'] = 'page_prev';
+$_LANG['page_next'] = 'page_next';
+$_LANG['page_last'] = 'page_last';
+$_LANG['next_article'] = 'next';
+$_LANG['prev_article'] = 'prev';
+$_LANG['contact'] = 'contact';
+$_LANG['link'] = 'link';
+$_LANG['tel'] = 'tel';
+$_LANG['email'] = 'email';
+$_LANG['weixin'] = 'weixin';
+$_LANG['address'] = 'address';
+$_LANG['more'] = 'more';
+$_LANG['welcome'] = 'welcome';
+$_LANG['select_lang'] = '选择语言';
+?>

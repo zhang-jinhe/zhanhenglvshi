@@ -1,0 +1,311 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>信息管理</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" charset="utf-8" src="../includes/My97DatePicker/WdatePicker.js"> </script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+<style>
+	.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.add_order_table{background:#fff;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+	float:left;
+	margin-top: 13px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+.client-div-select {margin-right:5px;}
+.tabs li{  margin-right:10px; height: 32px;width: 100px;  padding-left: 7px; text-align: left; text-overflow: ellipsis;overflow: hidden;  border: 1px solid #999; line-height:32px; display:inline-block;text-align:center;}
+.tabs li.active{  margin-right:10px; height: 32px;width: 100px;  padding-left: 7px;  text-align: left; text-overflow: ellipsis;overflow: hidden;  border: 1px solid #0093e8; line-height:32px; display:inline-block;text-align:center;}
+
+</style>
+</head>
+
+<body>
+	<div class="body_hei"></div>
+	<div class="body">
+		<div class="ur_here">当前位置 &gt; {$ur_here} - <a href="article.php?act=list">返回信息列表</a></div>
+		
+		<form enctype="multipart/form-data" action="" method="post" name="theForm"  id="theForm" >
+
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody style="width:100%">
+			
+			<tr style="width:100%;">
+				<td width="30%" align="right">信息标题：</td>
+				<td>
+					<input  name="title" value="{$article.title}" placeholder="请填{$ope.default_lang}标题" style="width:300px;height:27px;cursor:text;" required="true">
+					{if $ope.open_lang}
+                    <input  name="title{$select_lang}" value="<?php echo $GLOBALS[smarty]->_var[article]['title'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>" placeholder="请填{$langc.$select_lang}标题" style="width:300px;height:27px;cursor:text;" required="true">
+					{/if}
+				
+				</td>
+			</tr>
+			  <tr >
+				<td width="30%" align="right">信息分类：</td>
+				<td>
+				  <select name="article_cat"  id="selectcat" required="true">
+					<option value="">请选择...</option>
+					{foreach from=$articlecat item=cat}
+				 
+					<option value="{$cat.cat_id}"  {if $cat_id eq $cat.cat_id}selected="ture"{/if} >{if $cat.level eq 1}&nbsp;&nbsp;{/if}{if $cat.level eq 2}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if}{if $cat.level eq 3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if} {$cat.cat_name}</option>
+					
+					{/foreach}
+				  </select>
+			
+				 </td>
+			  </tr>
+			
+			<tr>
+				<td width="30%" align="right">是否显示：</td>
+				<td>
+				<input type="radio" name="is_show" value="1" {if $article.is_show eq 1}checked{/if}>是
+			  <input type="radio" name="is_show" value="0" {if $article.is_show eq 0}checked{/if}> 否</td>
+            </tr>
+			<tr>
+				<td width="30%" align="right">添加时间：</td>
+				<td>
+				   <input name="add_time" class="Wdate" value='{$article.add_time}' type="text" id="d15" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false,readOnly:true})"/>
+				 </td>
+			  </tr>
+              {if $ope.link eq '1'}
+			  <tr>
+				<td width="30%" align="right">跳转链接：</td>
+				<td><input name="link" type="text"   placeholder="请填跳转链接"  value="{$article.link}" >
+				
+				{if $ope.open_lang}
+				<input type="text" name="link{$select_lang}" maxlength="60" placeholder="请填{$langc.$select_lang}跳转链接"  value="<?php echo $GLOBALS[smarty]->_var[article]['link'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>" style="width:300px;height:27px;cursor:text;" />
+				{/if}
+
+				</td>
+			  </tr>
+			  {/if}
+			  <tr>
+				<td width="30%" align="right">关键字：</td>
+				<td>
+				<input type="text" name="keywords" maxlength="60" placeholder="请填{$ope.default_lang}关键字"  value="{$article.keywords}" style="width:300px;height:27px;cursor:text;"  />
+                {if $ope.open_lang}
+				<input type="text" name="keywords{$select_lang}" maxlength="60" placeholder="请填{$langc.$select_lang}关键字"  value="<?php echo $GLOBALS[smarty]->_var[article]['keywords'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?>" style="width:300px;height:27px;cursor:text;" />
+				{/if}
+
+				 
+				</td>
+			  </tr>
+			  <tr>
+				<td width="30%" align="right">网页描述：</td>
+				<td>
+				<textarea name="description" id="description" cols="40" rows="1"   placeholder="请填{$ope.default_lang}网页描述">{$article.description}</textarea>
+
+				{if $ope.open_lang}
+				<textarea name="description{$select_lang}" id="description{$select_lang}" cols="40" rows="1" placeholder="请填{$langc.$select_lang}网页描述" ><?php echo $GLOBALS[smarty]->_var[article]['description'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?></textarea>
+				{/if}
+				
+				</td>
+			  </tr>
+			  <tr style="width:100;height:10px;"></tr>
+			 <tr>
+				<td width="30%" align="right">简单说明：</td>
+				<td>
+				<textarea name="spcdesc" id="spcdesc" cols="40" rows="1" placeholder="请填{$ope.default_lang}简单说明">{$article.spcdesc}</textarea>
+				{if $ope.open_lang}
+				<textarea name="spcdesc{$select_lang}" id="spcdesc{$select_lang}" cols="40" rows="1" placeholder="请填{$langc.$select_lang}简单说明"><?php echo $GLOBALS[smarty]->_var[article]['spcdesc'.$GLOBALS[smarty]->_var[ope]['select_lang']] ; ?></textarea>
+				{/if}
+				</td>
+			  </tr>
+
+
+
+
+
+
+			  <tr>
+				<td width="30%" align="right">内容缩略图：</td>
+				<td><input type="file" name="article_thumb" id="article_thumb" size="45"  style="display:inline">
+{if $article.article_thumb neq ""}<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='article.php?act=drop_thumb&thumb=article_thumb&id={$article.article_id}'">{/if}
+{if $article.article_thumb}<img src="../{$article.article_thumb}" width=50 height=50 />{/if}
+				  <font color="red">尺寸{$size.article_w}px*{$size.article_h}px,大小控制2M内,图片文件名用拼音数字组成，不要用中文,建议图片类型jpg</font></td>
+			  </tr>
+
+
+			   
+			  {if $power.power_other_thumb}
+			   <tr>
+				<td width="30%" align="right">内容备用图：</td>
+				<td><input type="file" name="article_other_thumb" id="article_other_thumb" size="45"  style="display:inline">
+{if $article.article_other_thumb neq ""}<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='article.php?act=drop_thumb&thumb=article_other_thumb&id={$article.article_id}'">{/if}
+{if $article.article_thumb}<img src="../{$article.article_other_thumb}" width=50 height=50 />{/if}
+				  <font color="red">尺寸{$size.article_w}px*{$size.article_h}px,大小控制2M内,图片文件名用拼音数字组成，不要用中文,建议图片类型jpg</font></td>
+			  </tr>
+			  
+			 
+			  {/if}
+
+
+
+<tr style="width:100%;height:10px"></tr>
+{if $power.power_picture}
+		  <tr>
+				<td width="30%" align="right">相册图片：</td>
+				<td>
+
+图片1 <input name="userfile[]" type="file">{if $article.thumb_list.0.article_array_thumb}<img src="../{$article.thumb_list.0.article_array_thumb}" width=30 height=30 style="border:1px solid #ddd;"> 
+<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='?m=article&act=drop_thumb&thumb=article_array_thumb&id={$article.article_id}&gid=0'">{/if}<br>
+图片2 <input name="userfile[]" type="file">{if $article.thumb_list.1.article_array_thumb}<img src="../{$article.thumb_list.1.article_array_thumb}" width=30 height=30 style="border:1px solid #ddd;">
+<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='?m=article&act=drop_thumb&thumb=article_array_thumb&id={$article.article_id}&gid=1'"> {/if}<br>
+图片3 <input name="userfile[]" type="file">{if $article.thumb_list.2.article_array_thumb}<img src="../{$article.thumb_list.2.article_array_thumb}" width=30 height=30 style="border:1px solid #ddd;"> 
+<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='?m=article&act=drop_thumb&thumb=article_array_thumb&id={$article.article_id}&gid=2'">{/if}<br>
+图片4 <input name="userfile[]" type="file">{if $article.thumb_list.3.article_array_thumb}<img src="../{$article.thumb_list.3.article_array_thumb}" width=30 height=30 style="border:1px solid #ddd;"> 
+<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='?m=article&act=drop_thumb&thumb=article_array_thumb&id={$article.article_id}&gid=3'">{/if}<br>
+图片5 <input name="userfile[]" type="file">{if $article.thumb_list.4.article_array_thumb}<img src="../{$article.thumb_list.4.article_array_thumb}" width=30 height=30 style="border:1px solid #ddd;"> 
+<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='?m=article&act=drop_thumb&thumb=article_array_thumb&id={$article.article_id}&gid=4'">{/if}<br>
+				
+				
+				</td>
+			  </tr>
+
+
+<tr style="width:100%;height:10px"></tr>
+{/if}
+
+
+			</tbody>
+		</table>
+		
+		
+
+
+		<table class="add_order_table" style="margin:0px;display:;" width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody style="width:100%">
+			
+			<tr style="width:100%;">
+				<td width="30%" align="right">{$ope.default_lang}内容：</td>
+				<td>
+				    
+					
+					
+					{if $power.power_tab}
+					<div class="tabcontainer"> 
+					
+					{if $form_action eq 'update'}
+					<ul class="tabs"> 
+					<li class="active"><a href="#tab0"><span onclick="listTable.edit(this, 'edit_tab',{$article.article_id})">{if $article.tab}{$article.tab}{else}&nbsp;{/if}</span></a></li> 
+					
+					<li><a href="#tab1"><span onclick="listTable.edit(this, 'edit_tab1',{$article.article_id})">{if $article.tab1}{$article.tab1}{else}&nbsp;{/if}</span></a></li> 
+					<li><a href="#tab2"><span onclick="listTable.edit(this, 'edit_tab2',{$article.article_id})">{if $article.tab2}{$article.tab2}{else}&nbsp;{/if}</span></a></li> 
+					<li><a href="#tab3"><span onclick="listTable.edit(this, 'edit_tab3',{$article.article_id})">{if $article.tab3}{$article.tab3}{else}&nbsp;{/if}</span></a></li> 
+					
+					</ul> 
+					{/if}
+
+                    {if $form_action eq 'insert'}
+					<ul class="tabs"> 
+					<li class="active"><a href="#tab0"><input  name="tab" class="tabinput" ></li> 
+					<li><a href="#tab1"><input  name="tab1"  class="tabinput"></a></li> 
+					<li><a href="#tab2"><input  name="tab2"  class="tabinput"></a></li> 
+					<li><a href="#tab3"><input  name="tab3"  class="tabinput"></a></li> 
+					
+					</ul>
+					{/if}
+
+
+
+
+					<div class="tab_container"> 
+					<div id="tab0" class="tab_content" style="display: block; "> 
+					<script id="editortab0" type="text/plain" style="width:600px;height:300px;" name="content">{$article.content}</script>
+					</div> 
+
+					<div id="tab1" class="tab_content" style="display: none; "> 
+					<script id="editortab1" type="text/plain" style="width:600px;height:300px;" name="content1">{$article.content1}</script>
+					</div> 
+
+					<div id="tab2" class="tab_content" style="display: none; "> 
+					<script id="editortab2" type="text/plain" style="width:600px;height:300px;" name="content2">{$article.content2}</script>
+					</div> 
+
+
+					<div id="tab3" class="tab_content" style="display: none; "> 
+					<script id="editortab3" type="text/plain" style="width:600px;height:300px;" name="content3">{$article.content3}</script>
+					</div> 
+
+					</div> 
+
+					</div>
+
+					<script>
+					var editortab0 = UE.getEditor('editortab0');
+					var editortab1 = UE.getEditor('editortab1');
+					var editortab2 = UE.getEditor('editortab2');
+					var editortab3 = UE.getEditor('editortab3');
+					$(document).ready(function() { 
+					//点击事件 
+					$("ul.tabs li").click(function() { 
+					$("ul.tabs li").removeClass("active"); //移除class="active"属性
+					$(this).addClass("active"); //添加class="active"到选择标签中 
+					$(".tab_content").hide(); //隐藏全部标签内容 
+					var activeTab = $(this).find("a").attr("href"); //找到所属属性值来识别活跃选项卡和内容 
+					$(activeTab).fadeIn(); //使内容消失 
+					return false; 
+					}); 
+					});
+					</script>
+					{else}
+					<script id="editortab0" type="text/plain" style="width:600px;height:300px;" name="content">{$article.content}</script>
+					<script>
+					var editortab0 = UE.getEditor('editortab0');
+					</script>
+					{/if}
+					
+				</td>
+			</tr>
+			<tr style="width:100%;height:10px"></tr>
+		
+
+			
+
+			<tr style="width:100%;height:10px"></tr>
+
+          
+	
+		</tbody>
+		
+		</table>
+
+		
+		<div class="floor_operation a_center">
+		  <input type="hidden" name="id" value="{$article.article_id}" />
+          <input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+          <input type="reset" value="{$lang.button_reset}" class="input_button" />
+        </div>
+        <input type="hidden" name="act" value="{$form_action}" />
+		</div>
+		</form>
+	</div>
+
+
+
+</body></html>

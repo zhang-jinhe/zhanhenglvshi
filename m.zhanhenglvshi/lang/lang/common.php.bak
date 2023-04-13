@@ -1,0 +1,26 @@
+<?php
+
+/* 分页 */
+
+$_LANG['home'] = '首页 ';
+$_LANG['ur_here'] = '当前位置：';
+$_LANG['pager_1'] = '总计 ';
+$_LANG['pager_2'] = ' 个记录';
+$_LANG['pager_3'] = '，共 ';
+$_LANG['pager_4'] = ' 页。';
+$_LANG['page_first'] = '第一页';
+$_LANG['page_prev'] = '上一页';
+$_LANG['page_next'] = '下一页';
+$_LANG['page_last'] = '最末页';
+$_LANG['next_article'] = '下一篇';
+$_LANG['prev_article'] = '上一篇';
+$_LANG['contact'] = '联系我们';
+$_LANG['link'] = '友情链接';
+$_LANG['tel'] = '电话';
+$_LANG['email'] = '邮箱';
+$_LANG['weixin'] = '微信';
+$_LANG['address'] = '地址';
+$_LANG['more'] = '更多';
+$_LANG['welcome'] = '欢迎';
+$_LANG['select_lang'] = '欢迎';
+?>

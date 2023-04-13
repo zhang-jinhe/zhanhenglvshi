@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>头部</title>
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	.top{width:100%;height:80px;}
+	.logo{float:left;}
+	.index{float:left;width:200px;line-height:80px;font-weight:bold;text-align:center;}
+	.user_im{width:70%;line-height:80px;float:right;}
+	.user_name{float:right;background:url('{$ecsolve_path}/images/prople.png') no-repeat;background-position: top 25px left 0px;text-indent:36px;margin-right:10px;font-weight:bold;}
+	.user_date{float:right;height:80px;margin-right:10px;font-weight:bold;}
+	.user_date span{color:rgb(255,132,0);line-height:70px;font-weight:bold;font-size:24px;}
+	.tuichu{float:right;width:60px;line-height:40px;text-align:center;margin:20px 0px 20px 0px;border-left:1px solid #ccc;}
+	.tuichu a{font-weight:bold;}
+</style>
+</head>
+
+<body>
+{insert_scripts files="jquery.js"}
+	<div class="top">
+		<div class="logo"><a href="index.php" title="logo" target="_parent"><img src="{$ecsolve_path}/images/systemlogo.png" alt="system_logo" width="180" height="80"></a></div>
+		<div class="index font_30"><a href="index.php" title="返回首页" target="_parent">后台首页</a>&nbsp;&nbsp;<a href="../{$select_html}" title="返回首页" target="_blank">网站首页</a></div>
+		<div class="user_im">			
+			<div class="tuichu"><a href="privilege.php?act=logout" title="退出" target="_parent">退出</a></div>
+			<div class="user_date"><a href="index.php?act=clear_cache" target="content">清除缓存</a></div> 
+			<div class="user_date">
+
+
+{if $langvs.open_lang}
+
+		   <div align="center">
+		   
+		   {if $more_lang.$select_lang}
+		   <a href="javascript:;" target="content">选择语言</a>
+          <select name="select" id="select_lang"  > 
+		  <option value=''>请选择语言</option> 
+		  {foreach from=$more_lang item=item  key=key}
+          <option value='{$key}'>{$item}</option> 
+  
+		  {/foreach}
+		 </select>  <font color="red">已切换{$more_lang.$select_lang}</font>
+        </div> 
+		{/if}
+			{/if}
+			<script>
+			$("#select_lang").change(function(){
+            var select_lang=$("#select_lang").val();
+			if(select_lang=='')
+				{
+				
+				return false;
+				}
+            $.ajax(
+                    {
+                        type : "post", 
+                        url : "index.php?act=chang_lang", 
+                        data: {'select_lang':select_lang},
+                        success : function (result)
+                        {
+						
+                        window.parent.location.reload();
+                        }
+                    });
+        });
+			</script>
+			
+			</div> 
+			<div class="user_name"  > <a href="privilege.php?act=edit&id={$smarty.session.admin_id}" target="content"> {$smarty.session.admin_name|truncate:10}</a></div>
+		</div>
+	</div>
+
+</body></html>

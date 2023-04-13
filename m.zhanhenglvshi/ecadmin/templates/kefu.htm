@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>产品信息</title>
+<link href="{$ecsolve_path}/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{$ecsolve_path}/css/plan.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/default.css">
+<link rel="stylesheet" href="{$ecsolve_path}/css/prettify.css">
+<link href="{$ecsolve_path}/css/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var process_request = "正在加载。。。。";
+</script>
+{insert_scripts files="jquery.js,jquery.json.js,transport_bd.js,common.js"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.min.js"> </script>
+<style>
+	.ur_here {
+	height:40px;
+	line-height:40px;
+	margin-bottom:5px;
+	padding-left:20px;
+	background-color:#fff;
+}
+.add_order_table{background:#fff;}
+.goods_title{width:100%;height:40px;background:#fff;margin-top:10px;}
+.goods_title li{width:120px;height:100%;line-height:40px;font-size:24px;text-align:center;float:left;}
+.b_gray{background:#ddd;color:#fff;}
+.input_button{width: 60px; line-height: 30px; font-size: 14px;background: rgb(255,132,0);border-radius: 5px;color: #fff;cursor: pointer; border: 0px;margin-top:10px;}
+.goods_remove_album{width:300px;height:300px;}
+.goods_album {float:left;width:80%;}
+.new_sanjiao {
+	float:left;
+	margin-top: 13px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+
+</style>
+
+<script language="javascript">
+function   set(v){
+// g_value   =   v;   //set   global   value   if   needed
+location.href="kefu.php?act=css&skin="+v;
+} 
+</script>
+<style>
+.list-div td div{padding:5px 0;}
+.scfx span{margin:5px;white-space: nowrap;display:block;width:100px;float:left;}
+.scfx span img{vertical-align:middle;margin-right:3px;margin-left:3px;}
+.kfsrk{line-height:20px;height:25px;border:#CCC solid 1px;padding:0 5px;}
+.skinimg a{padding:3px;border:#CCC solid 1px;display:block;float:left;margin:0 3px;}
+.skinimg img{border:0;}
+.yborder{background:#FF0000;}
+.wborder{background:none;}
+.ysxz img{vertical-align:middle;}
+td{padding-left:20px; font-size:13px;line-height:40px;}
+</style>
+</head>
+
+<body>
+	<div class="body_hei"></div>
+	<div class="body">
+		<div class="ur_here">当前位置 &gt;在线客服</div>
+		
+	<form method="post" action="" name="theForm" onsubmit="return validate()" enctype="multipart/form-data">
+		
+
+		<table cellpadding='3' cellspacing='1'  class="add_order_table"   width="100%" >
+<tr>
+  <th colspan="2">{$lang.kefu}</th>
+</tr>
+<tr>
+  <td>
+  <strong>是否显示</strong><br />
+  </td>
+  <td width="89%"><input type="radio" name="kefushow" value="1"  {if $kefu.kefushow eq 1}checked{/if} />是<input type="radio"  name="kefushow" value="0" {$captcha.kefushowno} />否</td>
+</tr>
+<!-- {if $cfg[is_mobile]} -->
+<tr>
+  <td>
+  <strong>是否显示在移动端</strong><br />
+  </td>
+  <td width="89%"><input type="radio" name="mshow" value="1"  {if $kefu.mshow eq 1}checked{/if} />是<input type="radio"  name="mshow" value="0"  {if $kefu.mshow eq 0}checked{/if}/>否</td>
+</tr>
+<!-- {/if} -->
+<tr>
+  <td width="11%" >
+  <strong>皮肤更换</strong><br />
+  </td>
+  <td class="skinimg">
+<input type="radio" name="skin" value="1"  {if $kefu.skin eq 1}checked{/if} /> <img src="/skinp/okqq/qqimg/1.jpg"></a>
+<input type="radio" name="skin" value="2" {if $kefu.skin eq 2}checked{/if}/> <img src="/skinp/okqq/qqimg/2.jpg"></a>
+<input type="radio" name="skin" value="3" {if $kefu.skin eq 3}checked{/if}/> <img src="/skinp/okqq/qqimg/3.jpg"></a>
+<input type="radio" name="skin" value="4" {if $kefu.skin eq 4}checked{/if}/> <img src="/skinp/okqq/qqimg/4.jpg"></a>
+<input type="radio" name="skin" value="5" {if $kefu.skin eq 5}checked{/if}/> <img src="/skinp/okqq/qqimg/5.jpg"></a>
+<input type="radio" name="skin" value="6" {if $kefu.skin eq 6}checked{/if}/> <img src="/skinp/okqq/qqimg/6.jpg"></a>
+<input type="radio" name="skin" value="7" {if $kefu.skin eq 7}checked{/if}/> <img src="/skinp/okqq/qqimg/7.jpg"></a>
+<input type="radio" name="skin" value="8" {if $kefu.skin eq 8}checked{/if}/> <img src="/skinp/okqq/qqimg/8.jpg"></a>
+<input type="radio" name="skin" value="9" {if $kefu.skin eq 9}checked{/if}/> <img src="/skinp/okqq/qqimg/9.jpg"></a>
+<input type="radio" name="skin" value="10" {if $kefu.skin eq 10}checked{/if}/> <img src="/skinp/okqq/qqimg/10.jpg"></a>
+<input type="radio" name="skin" value="11" {if $kefu.skin eq 11}checked{/if}/> <img src="/skinp/okqq/qqimg/11.jpg"></a>
+<input type="radio" name="skin" value="12" {if $kefu.skin eq 12}checked{/if}/> <img src="/skinp/okqq/qqimg/12.jpg"></a>
+<input type="radio" name="skin" value="13" {if $kefu.skin eq 13}checked{/if}/> <img src="/skinp/okqq/qqimg/13.jpg"></a>
+<input type="radio" name="skin" value="14" {if $kefu.skin eq 14}checked{/if}/> <img src="/skinp/okqq/qqimg/14.jpg"></a>
+<input type="radio" name="skin" value="15" {if $kefu.skin eq 15}checked{/if}/> <img src="/skinp/okqq/qqimg/15.jpg"></a>
+<input type="radio" name="skin" value="16" {if $kefu.skin eq 16}checked{/if}/> <img src="/skinp/okqq/qqimg/16.jpg"></a>
+
+  
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>显示区域</strong><br />
+  </td>
+  <td>
+  		<div><input type="radio" name="pshow" value="0"  {if $kefu.pshow eq 0}checked{/if} />
+		左侧显示--顶部距离<input class="kfsrk" type="text" name="showlefttop" value="{$kefu.showlefttop}" size="5"/> 左侧距离<input class="kfsrk" type="text" name="showleft" value="{$kefu.showleft}" size="5"/>
+		</div>
+  		<div>
+		<input type="radio"  name="pshow" value="1"  {if $kefu.pshow eq 1}checked{/if} />
+		右侧显示--顶部距离<input class="kfsrk" type="text" name="showrighttop" value="{$kefu.showrighttop}" size="5"/>  右侧距离<input class="kfsrk" type="text" name="showright" value="{$kefu.showright}" size="5"/></div>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>显示方式</strong><br />
+  </td>
+  <td><input  name="fs_show" type="radio" value="1" {if $kefu.fs_show eq 1}checked{/if} />收缩 <input type="radio" name="fs_show" value="0"  {if $kefu.fs_show eq 0}checked{/if} />展开</td>
+</tr>
+
+<tr>
+  <td>
+  <strong>售前客服号码</strong><br />
+  </td>
+  <td>
+  		<div><input class="kfsrk" type="text" name="typeone" value="{$kefu.typeone}" /></div>
+  		<div>腾讯客服:<input class="kfsrk" type="text" name="kfqq" value="{$kefu.kfqq}" size="50"/></div>
+  		<div>旺旺客服:<input class="kfsrk" type="text" name="im" value="{$kefu.im}" size="50"/></div>
+  		<div>填写示例："张三:25872435,李四:49335350 "姓名和号码之间请用半角冒号（:）,如果您有多个客服的QQ号码，请在每个号码之间使用半角逗号（,）分隔。</div>
+  
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>售后客服号码</strong><br />
+  </td>
+  <td>
+  		<div><input class="kfsrk" type="text" name="typetwo" value="{$kefu.typetwo}" /></div>
+  		<div>腾讯客服:<input name="kfqqtwo" class="kfsrk" type="text" value="{$kefu.kfqqtwo}" size="50" /></div>
+  		<div>旺旺客服:<input name="imtwo" class="kfsrk" type="text" value="{$kefu.imtwo}" size="50" /></div>
+  		<div>填写示例："张三:25872435,李四:49335350 "姓名和号码之间请用半角冒号（:）,如果您有多个客服的QQ号码，请在每个号码之间使用半角逗号（,）分隔。</div>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>QQ样式选择</strong><br />
+  </td>
+  <td class="ysxz">
+  样式一：<input type="radio" name="qqcss" value="0" {if $kefu.qqcss eq 0}checked{/if} /><img src="/skinp/okqq/cssimg/qqon1.gif" style="margin-right:15px;">
+  样式二：<input type="radio" name="qqcss" value="1" {if $kefu.qqcss eq 1}checked{/if} /><img src="/skinp/okqq/cssimg/qqon2.gif" style="margin-right:15px;">
+  样式三：<input type="radio" name="qqcss" value="2" {if $kefu.qqcss eq 2}checked{/if} /><img src="/skinp/okqq/cssimg/qq.png" style="margin-right:15px;">
+  
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>旺旺样式选择</strong><br />
+  </td>
+  <td class="ysxz">
+  样式一：<input type="radio" name="wwcss" value="0" {if $kefu.wwcss eq 0}checked{/if} /><img src="/skinp/okqq/cssimg/wwon1.gif" style="margin-right:15px;">
+  样式二：<input type="radio" name="wwcss" value="1" {if $kefu.wwcss eq 1}checked{/if} /><img src="/skinp/okqq/cssimg/wwon2.gif" style="margin-right:15px;">
+  样式三：<input type="radio" name="wwcss" value="2" {if $kefu.wwcss eq 2}checked{/if} /><img src="/skinp/okqq/cssimg/ww.png" style="margin-right:15px;">
+  
+  </td>
+</tr>
+
+
+
+
+
+
+<tr>
+  <td>
+  <strong>客服电话</strong><br />
+  </td>
+  <td><input class="kfsrk" type="text" name="kftel" value="{$kefu.kftel}" />
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>营业时间</strong><br />
+  </td>
+  <td><input class="kfsrk" type="text" name="shijian" value="{$kefu.shijian}" />
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>二维码</strong><br />
+  </td>
+  <td>
+  <input class="kfsrk" type="file" name="code" />
+  {if $kefu.code neq ""}<input type="button" value="删除" onclick="if (confirm('确认删除吗?'))location.href='kefu.php?act=main'">{/if}
+{if $kefu.code}<img src="../{$kefu.code}" height=65 />{/if}
+  </td>
+</tr>
+
+
+<tr>
+  <td colspan="2" align="center"><input type="hidden" name="act" value="save_config" /><input type="hidden" name="moban_id" value="{$smarty.session.moban_id}" /></td>
+</tr>
+</table>
+		
+		<div class="floor_operation a_center">
+			
+          <input type="submit" value="{$lang.button_submit}" class="input_button submit_button" />
+         
+        </div>
+        <input type="hidden" name="act" value="{$form_act}" />
+		</div>
+		</form>
+	</div>
+
+<script>
+var goodsId = '{$goods.goods_id}';
+var elements = document.forms['theForm'].elements;
+var ue = UE.getEditor('editor');
+/**
+   * 鏂板?涓EUR涓?浘鐗
+   */
+	function addImg(obj)
+	{
+
+	$("#gallery-table").append('<tr><td width="30%" align="right"><a href="javascript:;" onclick="removeImg(this)">[-]</a></td><td>轮播图<input type="file" name="img_url[]" />备注：<input type="text" name="img_desc[]" size="20" /></td></tr>');
+
+	}
+
+	function add_brand()
+	{
+    $("#brand_text").html('名称：<input type="text" name="brand_name" id="brand_name" size="20" /><input class="button" value="添加品牌" onclick="add_brand_submit()" type="button"><input class="button" value="删除品牌" onclick="delete_brand_submit()" type="button">');
+	}
+
+    function add_brand_submit()
+	{
+     var brand_name=$("#brand_name").val();
+	  //alert(brand_name);
+
+      $.ajax({
+                type: "POST",
+                url: "goods.php?act=add_brand",
+                data: {brand_name:brand_name},
+                dataType: "json",
+                success: function(result){
+                    if(result=='success') {
+		             alert('success');
+                    } 
+		            if(result=='errer'){
+                        alert('errer');
+                    }
+                }
+            });
+    }
+  /**
+   * 鍒犻櫎鍥剧墖涓婁紶
+   */
+  function removeImg(obj)
+  {
+      var row = rowindex(obj.parentNode.parentNode);
+      var tbl = document.getElementById('gallery-table');
+
+      tbl.deleteRow(row);
+  }
+
+  /**
+   * 鍒犻櫎鍥剧墖
+   */
+  function dropImg(imgId)
+  {
+    Ajax.call('goods.php?is_ajax=1&act=drop_image', "img_id="+imgId, dropImgResponse, "GET", "JSON");
+  }
+
+  function dropImgResponse(result)
+  {
+      if (result.error == 0)
+      {
+          document.getElementById('gallery_' + result.content).style.display = 'none';
+      }
+  }
+</script>
+
+<script>
+function searchs(typekey)
+{
+    var filter = new Object;
+    filter.keywords = $("#"+typekey+"_keywords").val();//字段
+    filter.zhiduan = $("#"+typekey+"_keywords").attr("zhiduan");//字段
+	filter.type =typekey;
+    Ajax.call('goods.php?is_ajax=1&act=search_keywords', filter, searchResponse, 'GET', 'JSON')
+	
+}
+function searchResponse(result)
+{
+  var frm = document.forms['theForm'];
+  var sel = frm.elements[result.type+'_id'];
+  var value=result.type+'_id';
+  var text=result.zhiduan;
+  if (result.error == 0)
+  {
+    /* 清除 options */
+    sel.length = 0;
+    /* 创建 options */
+    var contents = result.content;
+    if (contents)
+    {
+        for (i = 0; i < contents.length; i++)
+        {
+            var opt = document.createElement("OPTION");
+            opt.value = contents[i][value];
+			opt.text  = contents[i][text];
+            sel.options.add(opt);
+        }
+    }
+    else
+    {
+        var opt = document.createElement("OPTION");
+        opt.value = 0;
+        opt.text  = search_is_null;
+        sel.options.add(opt);
+    }
+  }
+  if (result.message.length > 0)
+  {
+    alert(result.message);
+  }
+}
+
+function checkForm()  
+{  
+       var t1 = document.getElementsByName("show[]");  
+
+       for(i=0;i<t1.length;i++)  
+       {  
+           if(t1[i].type == "checkbox")  
+           {  
+               if(!(t1[i].checked))  
+               {  
+                   t1[i].checked = true;  
+                   t1[i].value = "0";  
+               }  
+           }  
+       }  
+       return true;  
+}  
+</script>
+</body></html>

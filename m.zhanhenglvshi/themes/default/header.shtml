@@ -1,0 +1,136 @@
+<style>
+header {    background: #fff;color: #000;}
+.lcitem .rect {background: #000;height: 3px;}
+.micro-nav-item { background: #fff;}
+.micro-nav-item ul li{border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #eee;}
+.micro-nav-item>ul>li>a {    padding-left: 0;    height: 50px; line-height:50px;}
+.micro-nav-item>ul>li>a .iconfont {display: none;}
+.micro-nav-item ul li p {color: #000;}
+
+#accordion{top: 5%;}
+.showFloatNav header a.mm-hbtn {left: 13%;}
+
+@media only screen and (max-width: 991px) {
+.mobileNavFloatLayer_1 {    width: 100%;}
+.mobileNav {position: absolute;}
+}
+
+#module_201912131043335846 .news_item .news_item_desc,#module_module_201912131043335846 .news-item time:before,.showFloatNav p.mlogo {display: none;}
+
+.mlogo {height: 100%;}
+.mlogo img{max-height: 100%;width: 60%}
+</style>
+
+
+<article class="ModuleMobileNavGiant layout-{#module_layoutid} mobileNav-16139359" id="module_16139359">
+      <section class="containers">
+        <section id="MobileNav" class="mobileNav mobileNav_1 black">
+          <header id="header">
+            <a href="javascript:;" class="mm-hbtn">
+              <div class="lcbody" onclick="showMobileNavFloatLayer(this)">
+                <div class="lcitem top">
+                  <div class="rect top">
+                  </div>
+                </div>
+                <div class="lcitem bottom">
+                  <div class="rect bottom">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <p class="mlogo"><img src="{$cfg.web_logo}"></p>
+          </header>
+        </section>
+        <div class="header-model">
+        </div>
+        <section id="MobileNavFloatLayer" class="mobileNavFloatLayer mobileNavFloatLayer_1 black itemType0">
+          <nav class="micro-nav-item">
+            <ul id="accordion">
+              <li class="clearfix border1px">
+                <a href="" class="link " target="_self">
+                  <i class="about-us fl" style="background: none"></i>
+                  <p class="fl maxlarge">{$lang.home}</p>
+                </a>
+              </li>
+			  {foreach name=nav from=$moban_get_navigator_list() item=nav key=key }
+ 
+              <li class="clearfix border1px">
+                <a href="{$nav.url}" class="link " target="_self">
+                  <i class="about-us fl" style="background: none"></i>
+                  <p class="fl maxlarge">{$nav.cat_name}</p><span class="more fr iconfont icon-jia"></span>
+                </a>
+                <ul class="clearfix subnav navul" style="display: none;">
+				                  {foreach name=snav from=$nav.catlist item=snav  }
+
+                  <li class="borderTop1px">
+                    <a href="{$snav.url}" class="link " target="_self">
+                      <p class="fl maxmiddle">{$snav.cat_name}</p>
+                    </a>
+                  </li>
+    	            
+                     {/foreach}
+                </ul>
+              </li>
+              {/foreach}
+            </ul>
+          </nav>
+        </section>
+      </section>
+      <script>var dom = "#module_"+"16139359"+" #MobileNavFloatLayer";
+     var ScrollFix = function(elem) {
+         var u = navigator.userAgent;
+         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+         var startY, startTopScroll;
+         elem.addEventListener('touchstart', function(event){
+             if(isiOS){if(!$('body').hasClass('bodyabstre')) $('body').addClass('bodyabstre');}
+             else{if(!$('body').hasClass('bodyfixd')) $('body').addClass('bodyfixd');}
+             startY = event.touches[0].pageY;
+             startTopScroll = elem.scrollTop;
+             //当滚动条在最顶部的时候
+             if(startTopScroll<= 0)
+                 elem.scrollTop = 1;
+             //当滚动条在最底部的时候
+             if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+                 elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+         }, false);
+     };
+    ScrollFix($(dom).get(0));
+     function onViewChange() {
+         $('body').removeClass('bodyabstre').removeClass('bodyabstre');
+         container.classList.toggle('view-change');
+     }
+
+    var container = document.querySelector('.containers');
+    var bumen = document.querySelector('.lcbody');
+    bumen.addEventListener('click', onViewChange);
+
+     $(function() {
+         var Accordion = function(el, multiple) {
+             this.el = el || {};
+             this.multiple = multiple || false;
+             var links = this.el.find('.more');
+             links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+         }
+
+         Accordion.prototype.dropdown = function(e) {
+             var $el = e.data.el,
+             $this = $(this),
+             $next = $this.parent().next();
+             $next.slideToggle();
+             $this.closest('li').toggleClass('open');
+             $this.parent().parent().siblings().find('.navul').slideUp().parent().removeClass('open');
+             $this.parent().siblings('ul').find('.navul').slideUp().parent().removeClass('open');
+            // debugger
+             if (!e.data.multiple) {
+                 $el.find('.navul').not($this.parents($el.selector + ' li').find('.navul')).slideUp().parent().removeClass('open');
+             };
+            return false
+         }
+
+         var accordion = new Accordion($('#accordion'), false);
+     });</script>
+    </article>
+<div id="headercontainer" layout_type="zone" class="headercontainer lyrow">
+<div id="headerzonecontainer" layout_type="zonecontainer" class="headerzonecontainer">
+</div>
+</div>
